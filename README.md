@@ -12,3 +12,7 @@
  + 파이썬 자료형은 크게 불변(immutable) 과 가변(mutable)으로 나뉜다.
  + 불변의 경우 call by value
  + 가변의 경우 call by reference 로 동작한다
+4. iterable 자료형을 list 형으로 형변환하는 경우 각 요소들이 분리되어 들어간다
+ + ex) str = '10110' 
+ + print(str)
+ + 출력: [1,0,1,1,0]
