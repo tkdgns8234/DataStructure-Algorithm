@@ -112,11 +112,85 @@
 
 ## 실전문제 3 음료수 얼려 먹기
 
-n, m = map(int, input().split())
+# n, m = map(int, input().split())
 
-ice = [[[0]* m] for _ in range(n)]
+# ice = [[[0]* m] for _ in range(n)]
 
-blocked = [False] * len(ice)
+# blocked = [False] * len(ice)
 
 # dfs, bfs 문제는 일단 어떤알고리즘을 적용해야하는지 파악하는게 가장 중요하네
 # 어렵다.. 내일 다시 풀자
+
+## 실전문제 3 음료수 얼려 먹기
+
+# n, m = map(int, input().split())
+# imap = []
+# for _ in range(n):
+#     imap.append(list(map(int, input())))
+
+#     #상,하,좌,우
+# mx = [-1,1,0,0]
+# my = [0,0,-1,1]
+
+# def dfs(x,y):
+#     if x < 0 or y < 0 or x > n-1 or y > m-1:
+#         return False
+#     if imap[x][y] == 0:
+#         imap[x][y] = 1
+#         for i in range(4):
+#             dx = x + mx[i]
+#             dy = y + my[i]
+#             dfs(dx,dy)
+#         return True
+#     return False
+        
+
+# result = 0
+# for i in range(n):
+#     for j in range(m):
+#         if dfs(i,j) == True:
+#             result += 1
+            
+# print(result)
+            
+## 실전문제 4 미로 탈출
+
+#queue 테스트
+# from collections import deque
+# queue = deque()
+# queue.append((1,2))
+# x,y = queue.popleft()
+# print(x,y)
+
+# from collections import deque
+# n, m = map(int, input().split())
+
+# graph = []
+# for i in range(n):
+#     graph.append(list(map(int, input())))
+
+# #    상 하 좌 우
+# gx = [-1,1,0,0]
+# gy = [0,0,-1,1]
+
+# def bfs(x,y):
+#     queue = deque()
+#     queue.append((x,y))
+    
+#     # queue가 Null 이 아닌경우
+#     while queue:
+#         x,y = queue.popleft()
+#         # 여기서 x < 0 or y < 0 or x >= n y >= m 조건을 넣었었는데 
+#         # 이게 치명적인 실수였다 값을 바꾼 후에 바로 검사하는게 맞는거같다 항상 아래처럼
+#         for i in range(4):
+#             dx = x + gx[i]
+#             dy = y + gy[i]
+#             if dx < 0 or dy < 0 or dx >= n or dy >= m:
+#                 continue
+#             if graph[dx][dy] == 1:
+#                 graph[dx][dy] = graph[x][y] + 1
+#                 queue.append((dx,dy))
+                
+#     return graph[n-1][m-1]
+
+# print(bfs(0,0))
