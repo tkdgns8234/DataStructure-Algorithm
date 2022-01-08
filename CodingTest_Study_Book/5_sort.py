@@ -116,3 +116,77 @@
 # for i in range(len(count)):
 #     for j in range(count[i]):
 #         print(i, end = " ")
+
+# 연습문제2 위에서 아래로
+# n = int(input())
+
+# l = []
+# for _ in range(n):
+#     l.append(int(input()))
+
+# l.sort(reverse=True)
+
+# for i in range(len(l)):
+#     print(l[i], end=" ")
+
+# 연습문제3 성적이 낮은 순서로 학생 출력하기
+# 정수, 중복, 성적 관련문제니 계수정렬로 푸는게 적절해보인다
+# 계수정렬 말고 데이터 최대 10만개 이니, 내장함수 사용해도됨(시간복잡도 O(nLogn))
+# 아직 파이썬 문법에 많이 익숙지않네
+# 헷갈렷던점
+# 1. 2차원배열 초기화/ 공간만 만들 순 없다 (None 제외)
+# 2. input().split() 의 return 은 list // 함수 들어가서 직접 보자 return 이 -> 
+# score를 미리 int형으로 형변환하지않은데 아쉬움이있음
+# list연산방법 헷갈렸었음 153 line
+# None 타입은 len에 잡히지않는다 (에러발생)
+
+# n = int(input())
+
+# #0 ~ 100 점 배열 생성
+# score_list = [[None] for i in range(101)]
+
+# for i in range(n):
+#     name, score = input().split()
+    
+#     if score_list[int(score)][0] == None:
+#         score_list[int(score)][0] = name
+#     else:
+#         score_list[int(score)] += [name]
+
+# print(score_list)
+
+# for i in range(len(score_list)):
+#     if score_list[i][0] != None:
+#         for j in range(len(score_list[i])):
+#             print(score_list[i][j])
+
+# 내장함수로 푸는 방법
+# key 이용하면 되겠네!
+
+# n = int(input())
+# array = []
+# for i in range(n):
+#     student_info = input().split()
+#     array.append((student_info[0], int(student_info[1])))
+
+# array.sort(key=lambda score: score[1])
+
+# for i in array:
+#     print(i[0], end=' ')
+
+# 실전문제 4 두 배열의 원소 교체
+# 잘 풀었다 근데 하나 틀렸다!
+# for 문 안에 조건을 추가하지 않았었다!!
+# n, k = map(int, input().split())
+
+# array_a = list(map(int, input().split()))
+# array_b = list(map(int, input().split()))
+
+# array_a.sort()
+# array_b.sort(reverse=True)
+
+# for i in range(k):
+#     if array_a[i] < array_b[i]:
+#         array_a[i],array_b[i] = array_b[i],array_a[i]
+
+# print(sum(array_a))
