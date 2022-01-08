@@ -16,3 +16,16 @@
  + ex) str = '10110' 
  + print(str)
  + 출력: [1,0,1,1,0]
+5. 함수의 매개변수르 *변수이름 형태로 지정하는 경우 가변인자가 된다
+ + def test(*args) 선언 시, test(1,2,3,4) 형태로 호출 가능
+6. 함수의 주석
+ + 아래와 같이 return 타입은 ->로 매개변수 타입은 :로 지정 가능 (단!! 어디까지나 주석이기에 강제성은 없다)
+```
+def funName(x: str, y: float = 6.5) -> int:
+    print(type(x))
+    print(type(y))
+    return x + y
+
+value = funName(3)
+출력: 9.5
+```
