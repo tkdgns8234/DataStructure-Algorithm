@@ -30,3 +30,6 @@ def funName(x: str, y: float = 6.5) -> int:
 value = funName(3)
 출력: 9.5
 ```
+7. if \_\_name\_\_ == '\_\_main\_\_' 의 의미
+ + 프로그램의 시작점(entry)인지 확인하기 위함
+ + 모듈을 import 해서 사용하는 경우와 모듈내부에서 직접 실행하는경우를 구분하기 위함
