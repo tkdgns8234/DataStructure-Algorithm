@@ -23,7 +23,7 @@
 # def union(parent, a, b):
 #     a = find_parent(parent, a)
 #     b = find_parent(parent, b)
-    
+
 #     if a < b:
 #         parent[b] = a
 #     else:
@@ -66,7 +66,7 @@
 
 # for i in range(1, v+1):
 #     parent[i] = i
-    
+
 # cycle = False
 
 # for _ in range(e):
@@ -124,7 +124,7 @@
 # for _ in range(e):
 #     a, b, cost = map(int, input().split())
 #     edges.append((cost, a, b))
-    
+
 # edges.sort()
 
 # for edge in edges:
@@ -157,7 +157,7 @@
 #     for i in range(1, v + 1):
 #         if indegree[i] == 0:
 #             q.append(i)
-    
+
 #     while q:
 #         now = q.popleft()
 #         result.append(now)
@@ -165,10 +165,119 @@
 #             indegree[i] -= 1
 #             if indegree[i] == 0:
 #                 q.append(i)
-    
+
 #     for i in result:
 #         print(i, end=" ")
-        
+
 # topologysort()
 
 # 실전문제2 팀 결성
+# 아주 간단한 union-find 문제같아
+# UNION = 0
+# HAS_SAME_PARENT = 1
+#
+#
+# def find_parent(parent, a):
+#     if parent[a] != a:
+#         parent[a] = find_parent(parent, parent[a])
+#     return parent[a]
+#
+#
+# def union_find(parent, a, b):
+#     a = find_parent(parent, a)
+#     b = find_parent(parent, b)
+#     if a > b:
+#         parent[a] = b
+#     else:
+#         parent[b] = a
+#
+#
+# n, m = map(int, input().split())
+#
+# parent = [0] * (m + 1)
+#
+# for i in range(m + 1):
+#     parent[i] = i
+#
+# result = []
+# for i in range(m):
+#     what, a, b = map(int, input().split())
+#     if what == UNION:
+#         union_find(parent, a, b)
+#     else:
+#         if find_parent(parent, a) == find_parent(parent, b):
+#             result.append("YES")
+#         else:
+#             result.append("NO")
+#
+# for rs in result:
+#     print(rs)
+
+# 실전 문제 3 도시 분할 계획
+# 전형 적인 최소 신장 트리의 경로 계산 문제 (크루스칼 알고리즘)
+# def find_parent(parent, a):
+#     if parent[a] != a:
+#         parent[a] = find_parent(parent, parent[a])
+#     return parent[a]
+#
+# def union_find(parent, a, b):
+#     a = find_parent(parent, a)
+#     b = find_parent(parent, b)
+#     if a > b:
+#         parent[a] = b
+#     else:
+#         parent[b] = a
+#
+# n, m = map(int, input().split())
+#
+# parent = [0] * (n + 1)
+# graph = []
+#
+# for i in range(n + 1):
+#     parent[i] = i
+#
+# for i in range(m):
+#     a, b, cost = map(int, input().split())
+#     graph.append((cost, a, b))
+#
+# graph.sort()
+#
+# result = []
+# for i in graph:
+#     print(i)
+#     cost, a, b = i
+#     if find_parent(parent, a) != find_parent(parent, b):
+#         result.append(cost)
+#         union_find(parent, a, b)
+#
+# result.remove(max(result))
+# print(sum(result))
+
+# 실전 문제4 커리큘럼
+# 전형적인 topology sort 문제 (정해진 순서대로 (선수조건대로) 무엇인가 해야할 때)
+# 하나씩 연결 관계를 끊어가면서 했던거같은데
+# 헷갈렸다. topology sort 문제는 union-find 와 완전히 별개다 주의하자
+# 어쩐지 union_find로는 도저히 풀 수 가 없었어
+
+from collections import deque
+
+n = int(input().split())
+
+parent = [0] * (n + 1)
+time = [0] * (n + 1)
+graph = [[] for i in range(n + 1)]
+
+for i in range(1, n + 1):
+    info = map(int, input().split())
+    time[i] = info[0]
+    for k in info[1:-1]:
+        graph[i].append(k)
+
+def topology_sort():
+    q = deque()
+    for i in range(1, len(graph) + 1):
+        if len(i) == 0:
+            q.append(time[i])
+
+    while q:
+        cost = q.popleft()
