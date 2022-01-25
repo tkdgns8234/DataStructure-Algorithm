@@ -260,24 +260,37 @@
 # 어쩐지 union_find로는 도저히 풀 수 가 없었어
 
 from collections import deque
+import copy
 
-n = int(input().split())
+n = int(input())
 
-parent = [0] * (n + 1)
+indegree = [0] * (n + 1)
 time = [0] * (n + 1)
 graph = [[] for i in range(n + 1)]
 
 for i in range(1, n + 1):
-    info = map(int, input().split())
+    info = list(map(int, input().split()))
     time[i] = info[0]
     for k in info[1:-1]:
-        graph[i].append(k)
+        graph[k].append(i) # 핵심부분에 가깝다 거꾸로 대입
+        indegree[i] += 1
 
 def topology_sort():
+    total_time = copy.deepcopy(time)
     q = deque()
-    for i in range(1, len(graph) + 1):
-        if len(i) == 0:
-            q.append(time[i])
-
+    for i in range(1, n + 1):
+        if indegree[i] == 0:
+            q.append(i)
+            
     while q:
-        cost = q.popleft()
+        now = q.popleft()
+        
+        for i in graph[now]:
+            total_time[i] = max(total_time[i],total_time[now]+time[i]) # 핵심알고리즘
+            indegree[i] -= 1
+            if indegree[i] == 0:
+                q.append(i)
+    for i in range(1, n + 1):
+        print(i)
+
+topology_sort()
