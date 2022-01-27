@@ -254,12 +254,12 @@
 # 정렬 알고리즘
 # 버블 정렬
 # arr = [1,3,2,3,52,67,5,2,4]
-
-# n = len(arr)
-# for i in range(n):
-#     for j in range(n-i-1):
-#         if arr[j] > arr[j+1]:
-#             arr[j], arr[j+1] = arr[j+1], arr[j]
+#
+# # n = len(arr)
+# # for i in range(n):
+# #     for j in range(n-i-1):
+# #         if arr[j] > arr[j+1]:
+# #             arr[j], arr[j+1] = arr[j+1], arr[j]
 
 # print(arr)
 
@@ -321,3 +321,195 @@
 # for i in range(len(count)):
 #     for j in range(count[i]):
 #         print(i,end=" ")
+
+# 실전 문제 2 위에서 아래로
+
+# n = int(input())
+#
+# su = [0] * n
+# for i in range(n):
+#     su[i] = int(input())
+#
+# su.sort(reverse=True)
+# for i in range(n):
+#     print(su[i], end=" ")
+
+# 실전 문제3 성적이 낮은 순서대로 학생 출력하기
+# 정렬 라이브러리랑 계수정렬 두가지 이용해서 풀어보자
+
+# 정렬 라이브러리 이용
+# n = int(input())
+#
+# list = []
+# for i in range(n):
+#     name, score = input().split()
+#     list.append((int(score), name))
+#     list.sort()
+#
+# for i in list:
+#     print(i[1], end = " ")
+
+# 계수정렬 이용
+# n = int(input())
+#
+# l = [[] for i in range(101)]
+#
+# for i in range(n):
+#     name, score = input().split()
+#     l[int(score)].append(name)
+#
+# print(l)
+#
+# for i in range(len(l)):
+#     for j in range(len(l[i])):
+#         print(l[i][j])
+
+# 실전문제4 두 배열의 원소 교체
+# 오름/내림차순 정렬 후 a원소가 더 작은경우 교체
+
+# 이진 탐색
+# arr = [1,23,1,23,214,13,413,4,1]
+#
+# def binary_search(arr, start, end, target):
+#     if start > end:
+#         return None
+#     mid = (start + end) // 2
+#     if arr[mid] == target:
+#         return mid + 1
+#     elif arr[mid] < target:
+#         return binary_search(arr, mid + 1, end, target)
+#     else:
+#         return binary_search(arr, start, mid - 1, target)
+#
+# position = binary_search(arr, 0, len(arr) - 1, 2323)
+#
+# print(position)
+
+# 이진탐색 반복문
+# 반복문도 중요해.. 응용할 땐 반복문 형태가 더 쉬워
+
+# arr = [12,31,3,213,12,312]
+#
+# def binary_search(arr, start, end, target):
+#     while start <= end:
+#         mid = (start + end) // 2
+#         if arr[mid] == target:
+#             return mid
+#         elif arr[mid] > target:
+#             end = mid - 1
+#         else:
+#             start = mid + 1
+#     return None
+#
+# arr.sort()
+# rs = binary_search(arr, 0, len(arr)-1, 213)
+# print(rs)
+
+
+
+# 실전문제 2 부품 찾기
+# import sys
+# input = sys.stdin.readline
+#
+# def binary_search(arr, start, end, target):
+#     if start > end:
+#         return None
+#     mid = (start + end) // 2
+#     if arr[mid] == target:
+#         return mid + 1
+#     elif arr[mid] > target:
+#         return binary_search(arr, start, mid - 1, target)
+#     elif arr[mid] < target:
+#         return binary_search(arr, mid + 1, end, target)
+#
+#
+# n = int(input())
+# arr1 = list(map(int, input().split()))
+# arr1.sort()
+#
+# m = int(input())
+# arr2 = list(map(int, input().split()))
+#
+# for i in arr2:
+#     if binary_search(arr1, 0, len(arr1)-1, i) is not None:
+#         print('yes')
+#     else:
+#         print('no')
+
+# 실전문제 3 떡볶이 떡 만들기
+# 떡을 자를 위치를 찾아야하는데
+# 떡의 최대 길이가 20억이니, 떡의 길이를 1 씩 줄여가며 찾으면 시간초과가 될것이다
+# -> 그럼? 이진탐색으로 잘라야할 위치를 계속 찾아야겠지
+# import sys
+# input = sys.stdin.readline
+#
+# n, m = map(int, input().split())
+# d_list = list(map(int, input().split()))
+#
+# start = 0
+# end = max(d_list)
+#
+# result = 0
+# while start <= end:
+#     total = 0
+#     mid = (start + end) // 2
+#     for i in d_list:
+#         if (i - mid) > 0:
+#             total += (i - mid)
+#     if total == m:
+#         result = mid
+#         break
+#     elif total < m:
+#         end = mid - 1
+#     else:
+#         result = mid
+#         start = mid + 1
+#
+# print(result)
+
+# 다이나믹 프로그래밍
+
+# 피보나치 수열
+# (탑 다운방식, 재귀구현 후 + 메모이제이션)
+# 메모이제이션을 위한 배열 초기화
+# m = [0] * 100
+#
+# def fivo(n):
+#     if n == 1 or n == 2:
+#         return 1
+#     if m[n] != 0:
+#         return m[n]
+#     m[n] = fivo(n-1) + fivo(n-2)
+#     return m[n]
+#
+# print(fivo(6))
+
+# 보텀 업 방식 (반복문 + dp 테이블 방식)
+# dp = [0] * 100
+# dp[1] = 1
+# dp[2] = 1
+#
+# for i in range(3, 100):
+#     dp[i] = dp[i-1] + dp[i-2]
+#
+# print(dp[99])
+
+# 실전 문제 1로 만들기
+# dp 문제는 진짜 감 잡기가 힘드네, 문제 접근 방식 생각하면서 계속 푸는 수 밖에 없다.
+
+# dp = [0] * 30001
+#
+# x = int(input())
+# for i in range(2, x + 1):
+#     # 빼기 연산의 경우
+#     dp[i] = dp[i - 1] + 1
+#     if i % 2 == 0:
+#         dp[i] = min(dp[i], dp[i // 2] + 1)
+#     if i % 3 == 0:
+#         dp[i] = min(dp[i], dp[i // 3] + 1)
+#     if i % 5 == 0:
+#         dp[i] = min(dp[i], dp[i // 5] + 1)
+#
+# print(dp[x])
+
+# 실전문제3 개미 전사
