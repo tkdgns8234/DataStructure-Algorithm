@@ -42,34 +42,34 @@
 #     print()
 
 #코드업 last 개미문제
-L = [[0 for _ in range(10)] for _ in range(10)]
-
-for i in range(10):
-    L[i] = list(map(int, input().split()))
-
-cpx = 1
-cpy = 1
-L[1][1] = 9
-while True:
-    if L[cpx][cpy+1] != 1:
-        if L[cpx][cpy+1] == 2:
-            L[cpx][cpy+1] = 9
-            break;
-        cpy += 1
-        L[cpx][cpy] = 9
-    else:
-        if L[cpx+1][cpy] != 1:
-            if L[cpx+1][cpy] == 2:
-                L[cpx+1][cpy] = 9
-                break;
-            cpx += 1
-            L[cpx][cpy] = 9
-        else:
-            break;
-    
-
-    
-for i in range(10):
-    for j in range(10):
-        print(L[i][j], end=" ")
-    print()
+# L = [[0 for _ in range(10)] for _ in range(10)]
+#
+# for i in range(10):
+#     L[i] = list(map(int, input().split()))
+#
+# cpx = 1
+# cpy = 1
+# L[1][1] = 9
+# while True:
+#     if L[cpx][cpy+1] != 1:
+#         if L[cpx][cpy+1] == 2:
+#             L[cpx][cpy+1] = 9
+#             break;
+#         cpy += 1
+#         L[cpx][cpy] = 9
+#     else:
+#         if L[cpx+1][cpy] != 1:
+#             if L[cpx+1][cpy] == 2:
+#                 L[cpx+1][cpy] = 9
+#                 break;
+#             cpx += 1
+#             L[cpx][cpy] = 9
+#         else:
+#             break;
+#
+#
+#
+# for i in range(10):
+#     for j in range(10):
+#         print(L[i][j], end=" ")
+#     print()

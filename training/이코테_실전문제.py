@@ -96,7 +96,7 @@
 #         idx = move.index(k)
 #         nx = rx + move_x[idx]
 #         ny = ry + move_y[idx]
-    
+
 #         if nx >= 1 and ny >= 1 and nx < 9 and ny < 9:
 #             rx = nx
 #             ry = ny
@@ -119,7 +119,7 @@
 # def dfs(start, visited, graph):
 #     visited[start] = True
 #     print(start)
-    
+
 #     for i in graph[start]:
 #         if visited[i] == False:
 #             dfs(i, visited, graph)    
@@ -148,7 +148,7 @@
 #     visited[start] = True
 #     q = deque()
 #     q.append(start)
-    
+
 #     while q:
 #         now = q.popleft()
 #         print(now, end = " ")
@@ -156,7 +156,7 @@
 #             if not visited[i]:
 #                 q.append(i)
 #                 visited[i] = True
-        
+
 
 # graph = [[],
 #          [2,3,8],
@@ -182,14 +182,14 @@
 #         return False
 #     if graph[x][y] == 0:
 #         graph[x][y] = 1
-        
+
 #         dfs(x-1, y, graph)
 #         dfs(x+1, y, graph)
 #         dfs(x, y-1, graph)
 #         dfs(x, y+1, graph)
 #         return True
 #     return False
-    
+
 # n, m = map(int, input().split())
 
 # graph = []
@@ -235,7 +235,7 @@
 
 # while q:
 #     x, y = q.popleft()
-        
+
 #     for i in range(len(move)):
 #         nx = x + move_x[i]
 #         ny = y + move_y[i]
@@ -246,7 +246,7 @@
 #         if graph[nx][ny] == 1:
 #             graph[nx][ny] = graph[x][y] + 1
 #             q.append((nx,ny))
-    
+
 #     if graph[n-1][m-1] != 1:
 #         print(graph[nx][ny])
 #         break;
@@ -299,10 +299,10 @@
 #         return arr
 #     pivot = arr[0]
 #     tail = arr[1:]
-    
+
 #     left_side = [i for i in tail if i <= pivot]
 #     right_side = [i for i in tail if i > pivot]
-    
+
 #     return quick_sort(left_side) + [pivot] + quick_sort(right_side)
 
 # arr = quick_sort(arr)
@@ -404,7 +404,6 @@
 # arr.sort()
 # rs = binary_search(arr, 0, len(arr)-1, 213)
 # print(rs)
-
 
 
 # 실전문제 2 부품 찾기
@@ -513,3 +512,153 @@
 # print(dp[x])
 
 # 실전문제3 개미 전사
+# n = int(input())
+# s_list = list(map(int, input().split()))
+#
+# dp = [0] * n
+#
+# dp[0] = s_list[0]
+# dp[1] = max(s_list[0],s_list[1])
+#
+# for i in range(2,n):
+#     dp[i] = max(dp[i-1], dp[i-2] + s_list[i])
+#
+# print(dp[n-1])
+
+# 실전문제4 바닥 공사
+# n = int(input())
+#
+# dp = [0] * n
+#
+# dp[0] = 1
+# dp[1] = 3
+#
+# for i in range(2, n):
+#     dp[i] = dp[i-1] + dp[i-2] * 2
+#
+# print(dp[n-1])
+
+# 다익스트라 알고리즘
+# 개선된 다익스트라 알고리즘 구현(heap)
+# import heapq
+# INF = int(1e9)
+# v, e = map(int, input().split())
+#
+# start = int(input())
+#
+# graph = [[] for i in range(v + 1)]
+# distance = [INF] * (v + 1)
+#
+# for i in range(e):
+#     a,b,c = map(int, input().split())
+#     graph[a].append((b,c))
+#
+# def dijkstra(start):
+#     q = []
+#     distance[start] = 0
+#     heapq.heappush(q, (0, start))
+#
+#     while q:
+#         cost, now = heapq.heappop(q)
+#         if distance[now] < cost:
+#             continue
+#         for i in graph[now]:
+#             d = cost + i[1]
+#             if distance[i[0]] > d:
+#                 distance[i[0]] = d
+#                 heapq.heappush(q, (d, i[0]))
+#
+# dijkstra(start)
+# for i in range(1, v+1):
+#     print(distance[i])
+
+# 플로이드 워셜 알고리즘
+# 거쳐가는 최소 경로를 모두 2차원 배열로 초기화
+# INF = int(1e9)
+# n = int(input())
+# m = int(input())
+#
+# graph = [[INF]*(n+1) for i in range(n + 1)]
+#
+# for i in range(1, n + 1):
+#     graph[i][i] = 0
+#
+# for i in range(m):
+#     a, b, c = map(int, input().split())
+#     graph[a][b] = c
+#
+# for i in range(1, n+1):
+#     for a in range(1, n + 1):
+#         for b in range(1, n + 1):
+#             graph[a][b] = min(graph[a][b], graph[a][i] + graph[i][b])
+#
+# for i in range(1, n+1):
+#     print()
+#     for j in range(1, n+1):
+#         print(graph[i][j], end=" ")
+
+
+# 실전문제2 미래 도시
+# INF = int(1e9)
+# n, m = map(int, input().split())
+#
+# graph = [[INF]*(n+1) for i in range(n+1)]
+#
+# for i in range(1, n+1):
+#     graph[i][i] = 0
+#
+# for i in range(m):
+#     a,b = map(int, input().split())
+#     graph[a][b] = 1
+#     graph[b][a] = 1
+#
+# # 1->K->X
+# x, k = map(int, input().split())
+#
+# for i in range(1, n+1):
+#     for a in range(1, n+1):
+#         for b in range(1, n + 1):
+#             graph[a][b] = min(graph[a][b], graph[a][i] + graph[i][b])
+#
+# print(graph[1][k] + graph[k][x])
+
+# 실전문제3 전보
+# 딱 봐도 다익!
+# import heapq
+#
+# INF = int(1e9)
+# n, m, start = map(int, input().split())
+#
+# graph = [[] for i in range(n + 1)]
+# distance = [INF] * (n+1)
+#
+# for i in range(m):
+#     a, b, c = map(int, input().split())
+#     graph[a].append((b, c))
+#
+# def dijkstra(start):
+#     q = []
+#     heapq.heappush(q, (0, start))
+#     distance[start] = 0
+#
+#     while q:
+#         dis, now = heapq.heappop(q)
+#         if distance[now] < dis:
+#             continue
+#         for i in graph[now]:
+#             cost = i[1] + dis
+#             if distance[i[0]] > cost:
+#                 distance[i[0]] = cost
+#                 heapq.heappush(q, (cost, i[0]))
+#
+# dijkstra(start)
+#
+# maximum = 0
+# count = 0
+# for i in range(1, n+1):
+#     if distance[i] != INF:
+#         count += 1
+#         if maximum < distance[i]:
+#             maximum = distance[i]
+#
+# print(count-1, maximum)
