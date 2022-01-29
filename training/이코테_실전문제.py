@@ -662,3 +662,242 @@
 #             maximum = distance[i]
 #
 # print(count-1, maximum)
+
+# 그래프 알고리즘
+# union - find 알고리즘
+
+# union -find 사이클 판별
+
+# 최소신장트리 알고리즘 (모든 노드 연결, 무방향 트리, 사이클 x)
+# 크루스칼 알고리즘
+# 가장 적은 비용으로 모든 노드 연결 가능
+# LogE 가 가장 큰 시간소요 O(LogE)
+
+# 위상 정렬 알고리즘
+# 순차적으로 진행 시, O(V+E)
+
+# union-find 알고리즘 (서로소 판별, 사이클 확인)
+# 노드, 간선: 6,4
+# def find_parent(parent, x):
+#     if parent[x] != x:
+#         parent[x] = find_parent(parent, parent[x])
+#     return parent[x]
+
+# def union_find(parent, a, b):
+#     a = find_parent(parent, a)
+#     b = find_parent(parent, b)
+    
+#     if a > b:
+#         parent[a] = b
+#     else:
+#         parent[b] = a
+        
+
+# v, e = map(int, input().split())
+
+# parent = [0] * (v + 1)
+
+# for i in range(1, v + 1):
+#     parent[i] = i
+
+# cycle = False
+# for i in range(e):
+#     a, b = map(int, input().split())
+#     if find_parent(parent, a) == find_parent(parent, b):
+#         cycle = True
+#         break
+#     else:
+#         union_find(parent, a, b)
+
+# print(cycle)
+
+# 크루스칼 알고리즘
+
+# def find_parent(parent, x):
+#     if parent[x] != x:
+#         parent[x] = find_parent(parent, parent[x])
+#     return parent[x]
+
+# def union_find(parent, a, b):
+#     a = find_parent(parent, a)
+#     b = find_parent(parent, b)
+    
+#     if a > b:
+#         parent[a] = b
+#     else:
+#         parent[b] = a
+
+# v, e = map(int, input().split())
+
+# parent = [0] * (v + 1)
+# for i in range(1, v+1):
+#     parent[i] = i
+
+# edges = []
+# for i in range(e):
+#     a,b,cost = map(int, input().split())
+#     edges.append((cost, a, b))
+
+# edges.sort()
+
+# result = 0
+# for i in edges:
+#     a, b, cost = i
+    
+#     if find_parent(parent, a) != find_parent(parent, b):
+#         result += cost
+#         union_find(parent, a, b)
+
+# print(result)
+
+# topology sort 위상정렬
+# 컨셉: 일정 규칙에 따라 순차적으로 정렬을 수행할 때 사용
+# 구현: 집입차수(indegree)와 queue 를 이용해 정렬
+
+# from collections import deque
+# v, e = map(int, input().split())
+
+# indegree = [0] * (v + 1)
+# graph = [[] for i in range(v+1)]
+
+# for i in range(e):
+#     a, b = map(int, input().split())
+#     graph[a].append(b)
+#     indegree[b] += 1
+
+# q = deque()
+# result = []
+
+# for i in range(1, v+1):
+#     if indegree[i] == 0:
+#         q.append(i)
+
+# while q:
+#     now = q.popleft()
+#     result.append(now)
+    
+#     for i in graph[now]:
+#         indegree[i] -= 1
+#         if indegree[i] == 0:
+#             q.append(i)
+
+# print(result)
+
+
+# 실전문제 2 팀 결성
+# UNION = 0
+# CHECK = 1
+
+# def find_parent(parent, x):
+#     if parent[x] != x:
+#         parent[x] = find_parent(parent, parent[x])
+#     return parent[x]
+# def union_find(parent, a ,b):
+#     a = find_parent(parent, a)
+#     b = find_parent(parent, b)
+    
+#     if a > b:
+#         parent[a] = b
+#     else:
+#         parent[b] = a
+
+# n, m = map(int, input().split())
+
+# parent = [0] * (n + 1)
+
+# for i in range(n+1):
+#     parent[i] = i
+
+# rs = []
+# for i in range(m):
+#     act, a, b = map(int, input().split())
+#     if act == UNION:
+#         union_find(parent, a, b)
+#     else:
+#         if find_parent(parent, a) == find_parent(parent, b):
+#             rs.append('YES')
+#         else:
+#             rs.append('NO')
+
+# for i in rs:
+#     print(i, end = " ")
+
+# 실전문제 3 도시 분할 계획
+# 크루스칼 알고리즘 (최소신장트리)
+# def find_parent(parent, x):
+#     if parent[x] != x:
+#         parent[x] = find_parent(parent, parent[x])
+#     return parent[x]
+
+# def union_find(parent, a, b):
+#     a = find_parent(parent, a)
+#     b = find_parent(parent, b)
+    
+#     if a > b:
+#         parent[a] = b
+#     else:
+#         parent[b] = a
+
+# n, m = map(int, input().split())
+
+# parent = [0] * (n+1)
+# edges = []
+
+# for i in range(1, n+1):
+#     parent[i] = i
+
+# for i in range(m):
+#     a, b, cost = map(int, input().split())
+#     edges.append((cost, a, b))
+
+# edges.sort()
+# result = []
+
+# for edge in edges:
+#     cost, a, b = edge
+#     if find_parent(parent, a) != find_parent(parent, b):
+#         result.append(cost)
+#         union_find(parent, a, b)
+
+# result.remove(max(result))
+
+# print(sum(result))
+
+# 실전문제 4 커리큘럼
+# 위상정렬
+# from collections import deque
+# n = int(input())
+
+# indegree = [0] * (n+1)
+# graph = [[]for i in range(n+1)]
+# time = [0] * (n+1)
+
+# for i in range(1, n+1):
+#     l = list(map(int, input().split()))
+#     time[i]=l[0]
+#     before = l[1:-1]
+#     for j in before:
+#         indegree[i] += 1
+#         graph[j].append(i)
+        
+# def topology_sort():
+#     result = [100001] * (n+1)
+#     q = deque()
+#     for i in range(1, n+1):
+#         if indegree[i] == 0:
+#             q.append(i)
+#             result[i] = time[i]
+    
+#     while q:
+#         now = q.popleft()
+        
+#         for i in graph[now]:
+#             indegree[i] -= 1
+#             result[i] = min(result[i], result[now] + time[i])
+#             if indegree[i] == 0:
+#                 q.append(i)
+                
+#     for i in range(1, n+1):
+#         print(result[i])
+# topology_sort()
+
