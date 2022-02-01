@@ -83,6 +83,33 @@
 # print(all_case-c)
 
 # Q06 무지의 먹방 라이브
+# import heapq
+#
 # def solution(food_times, k):
-#     answer = 0
+#     q = []
+#     if sum(food_times) <= k:
+#         return -1
+#     for i in range(len(food_times)):
+#         heapq.heappush(q, (food_times[i], i+1))
+#
+#     total_time = 0
+#     prev_time = 0
+#
+#     while q:
+#         now = q[0][0]
+#         time = (now - prev_time) * len(q)
+#
+#         if total_time + time < k:
+#             total_time += time
+#             heapq.heappop(q)
+#             prev_time = now
+#         else:
+#             break
+#
+#     index = (k - total_time) % len(q)
+#     q.sort(key=lambda arr: arr[1])
+#     answer = q[index][1]
 #     return answer
+#
+#
+# print(solution([3,1,2],5))
