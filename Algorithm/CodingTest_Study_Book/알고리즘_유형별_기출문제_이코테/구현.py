@@ -30,14 +30,24 @@
 # print(''.join(str_list))
 
 # Q09 문자열 압축
-def solution(s):
-    result = []
-    for i in range(2, len(s)):
-        start = 0
-        for j in s[start::2]:
-            pass
-
-
-
-    answer = 0
-    return answer
+# def solution(s):
+#     answer = len(s)
+#
+#     for step in range(1, len(s)//2+1):
+#         compressed = ""
+#         prev = s[0:step]
+#         count = 1
+#
+#         for j in range(step, len(s), step):
+#             if prev == s[j:j+step]:
+#                 count+=1
+#             else:
+#                 compressed += str(count) + prev if count>=2 else prev
+#                 prev = s[j:j+step]
+#                 count=1
+#         compressed += str(count)+prev if count>=2 else prev
+#         print(compressed)
+#         answer = min(answer, len(compressed))
+#     return answer
+# s= input()
+# print(solution(s))
