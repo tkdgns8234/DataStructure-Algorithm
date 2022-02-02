@@ -175,15 +175,20 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Algorithm/CodingTest_Study_Book/알고리즘_유형별_기출문제_이코테/구현.py</url>
-          <line>32</line>
-          <option name="timeStamp" value="4" />
+          <line>167</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Algorithm/CodingTest_Study_Book/알고리즘_유형별_기출문제_이코테/구현.py</url>
-          <line>36</line>
-          <option name="timeStamp" value="5" />
+          <line>170</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="graph" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

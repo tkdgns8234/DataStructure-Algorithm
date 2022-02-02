@@ -14,7 +14,11 @@
 # p = [(1, 2), (3, 1), (2, 3)]
 #
 # print(p[2][1])
-s = ['a','b','c','d']
-count = 1
-s = 2
-print(count if s == 1 else count)
+# s = ['a','b','c','d']
+# count = 1
+# s = 2
+# print(count if s == 1 else count)
+
+for i in range(3):
+    x = i
+print(x)
