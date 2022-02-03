@@ -19,6 +19,6 @@
 # s = 2
 # print(count if s == 1 else count)
 
-for i in range(3):
-    x = i
-print(x)
+arr = [[-1] * 2 for i in range(5)]
+print(arr)
+

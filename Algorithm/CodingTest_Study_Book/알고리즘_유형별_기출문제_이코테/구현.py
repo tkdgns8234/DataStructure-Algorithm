@@ -185,4 +185,112 @@
 # print(time)
 #
 
+# Q12 기둥과 보 설치
+# def condition(answer):
+#     for ans in answer:
+#         x, y, what = ans
+#         # 기둥
+#         if what == 0:
+#             if y == 0 or [x-1, y, 1] in answer or [x, y, 1] in answer or [x, y-1, 0] in answer:
+#                 continue
+#             return False
+#         # 보
+#         elif what == 1:
+#             if [x, y-1, 0] in answer or [x+1, y-1, 0] in answer or [x-1, y, 1] in answer and [x+1, y, 1] in answer:
+#                 continue
+#             return False
+#     return True
+#
+#
+# def solution(n, build_frame):
+#     answer = []
+#     for frame in build_frame:
+#         # x, y, 기둥/보, 삭제/설치
+#         x, y, what, action = frame
+#         # 삭제
+#         if action == 0:
+#             answer.remove([x, y, what])
+#             if not condition(answer):
+#                 answer.append([x, y, what])
+#         # 설치
+#         elif action == 1:
+#             answer.append([x, y, what])
+#             if not condition(answer):
+#                 answer.remove([x, y, what])
+#     answer.sort()
+#     return answer
 
+# Q13 치킨 배달
+# 다시 풀어야함
+# 어떻게 구현하면 좋을지 적절한 방법을 좀 더 생각한 후에 구현을 시작하자 꼭
+# 아래 코드는 완전히 잘못 접근했다
+# 너무 최단거리라는 말에 집중해서 강제로 bfs를 적용하려다가 망했다
+# 문제에서 주어지는 설명에 조금 더 집중해서 구현하면 좋겠다
+
+# ------------------------------------
+# from collections import deque
+# import copy
+# def bfs(arr, start):
+#     c_arr = copy.deepcopy(arr)
+#     x, y = start
+#     q = deque()
+#     q.append((x, y))
+#     # 3인경우 방문
+#     c_arr[x][y] = 3
+#     while q:
+#         x, y = q.popleft()
+#         if c_arr[x][y] == CHICKEN_STORE:
+#             # 가장 가까운 거리의 치킨집 x,y 좌표 리턴
+#             return tuple(x,y)
+#
+#         if c_arr[x][y] != 3:
+#             q.append((x + 1, y))
+#             q.append((x - 1, y))
+#             q.append((x, y + 1))
+#             q.append((x, y - 1))
+#     # 찾을 수 없는경우
+#     return None
+#
+# EMPTY = 0
+# HOUSE = 1
+# CHICKEN_STORE = 2
+#
+# n, m = map(int, input().split())
+#
+# arr = []
+# # 가까운 거리의 집의 갯수 (x,y,갯수)
+# chicken_house_count = [[0] * n for _ in range(n)]
+#
+# for i in range(n):
+#     arr.append(list(map(int, input().split())))
+#
+# for i in range(n):
+#     for j in range(n):
+#         if arr[i][j] == HOUSE:
+#             if bfs(arr, (i, j)) is not None:
+#                 # 가까운 치킨집의 x, y 좌표
+#                 x, y = bfs(arr, (i, j))
+#                 chicken_house_count[x][y] += 1
+#
+# distance = []
+# for i in range(n):
+#     for j in range(n):
+#         if chicken_house_count[i][j] != 0:
+#             distance.append(chicken_house_count[i][j], i, j)
+#
+# distance.sort()
+# for _ in range(len(distance) - (len(distance) - m)):
+#     val = distance.pop()
+#     dis, x, y = val
+#     arr[x][y] = 0
+# ------------------------------------
+
+# Q14 외벽 점검
+# 다시풀자
+# 원형문제의 경우 길이를 두배로 해서 일자로 표현한 후 푸는게 좋다
+# 주어진 숫자가 매우 적으니 완전탐색
+
+# def solution(n, weak, dist):
+#
+#     answer = 0
+#     return answer
