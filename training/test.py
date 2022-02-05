@@ -19,6 +19,11 @@
 # s = 2
 # print(count if s == 1 else count)
 
-arr = [[-1] * 2 for i in range(5)]
-print(arr)
+# arr = [[-1] * 2 for i in range(5)]
+# print(arr)
+
+from itertools import product
+oper = ['+','-','*','/']
+
+print(list(product(oper, 3)))
 
