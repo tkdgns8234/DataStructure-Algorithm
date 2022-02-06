@@ -22,8 +22,25 @@
 # arr = [[-1] * 2 for i in range(5)]
 # print(arr)
 
-from itertools import product
-oper = ['+','-','*','/']
+# result = -4
+# result //= 3
+#
+# print(result)
+# result2 = -4
+# print(int(result2 / 3))
 
-print(list(product(oper, 3)))
+# from itertools import permutations
+# oper = ['+','+','-']
+#
+# print(list(permutations(oper, 3)))
+#
 
+pos = {(1, 2), (2, 1)}
+pos2 = {(2, 1), (1, 2)}
+l = []
+l.append(pos)
+l.append(pos2)
+
+print(l)
+
+print(list(pos))

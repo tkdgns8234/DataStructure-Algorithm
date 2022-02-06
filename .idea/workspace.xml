@@ -57,19 +57,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="9_graph" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="그리디" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Administrator\AppData\Local\Programs\Python\Python38\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/CodingTest_Study_Book" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/CodingTest_Study_Book/알고리즘_유형별_기출문제_이코테" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/CodingTest_Study_Book/9_graph.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/CodingTest_Study_Book/알고리즘_유형별_기출문제_이코테/그리디.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,9 +166,9 @@
       <list>
         <item itemvalue="Python.test" />
         <item itemvalue="Python.DFS_BFS" />
+        <item itemvalue="Python.그리디" />
         <item itemvalue="Python.구현" />
         <item itemvalue="Python.이코테_그리디" />
-        <item itemvalue="Python.9_graph" />
       </list>
     </recent_temporary>
   </component>
