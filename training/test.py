@@ -35,12 +35,14 @@
 # print(list(permutations(oper, 3)))
 #
 
-pos = {(1, 2), (2, 1)}
-pos2 = {(2, 1), (1, 2)}
-l = []
-l.append(pos)
-l.append(pos2)
+# pos = {(1, 2), (2, 1)}
+# pos2 = {(2, 1), (1, 2)}
+# l = []
+# l.append(pos)
+# l.append(pos2)
+#
+# print(l)
 
-print(l)
+# print(list(pos))
 
-print(list(pos))
+print(0/3)
