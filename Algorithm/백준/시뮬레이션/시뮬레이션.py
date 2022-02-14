@@ -1,3 +1,152 @@
+# 문제1 감시
+# 못 풀었다
+# 감탄스럽다 아래 주소의 코드
+# #https://developer-ellen.tistory.com/53
+# 좌 우 상 하
+# import copy
+# n, m = map(int, input().split())
+# cc_info = []
+# data = []
+#
+# move_type = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+# cctv = [
+#         [],
+#         [[0], [1], [2], [3]],
+#         [[0, 1], [2, 3]],
+#         [[0, 3], [0, 2], [1, 3], [1, 2]],
+#         [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]],
+#         [[0, 1, 2, 3]]
+#         ]
+#
+# for i in range(n):
+#     l = list(map(int, input().split()))
+#     data.append(l)
+#     for j in range(m):
+#         if l[j] in [1, 2, 3, 4, 5]:
+#             cc_info.append((l[j], i, j))
+#
+#
+# def fill(md, x, y, arr):
+#     for i in md:
+#         nx = x
+#         ny = y
+#         while True:
+#             nx = nx + move_type[i][0]
+#             ny = ny + move_type[i][1]
+#             if nx < 0 or ny < 0 or nx >= n or ny >= m:
+#                 break
+#             # 벽인 경우
+#             if arr[nx][ny] == 6:
+#                 break
+#             if arr[nx][ny] == 0:
+#                 arr[nx][ny] = 7 # 7 을 cctv가 바라본 지역으로 설정
+#
+#
+# def dfs(depth, arr):
+#     global min_val
+#
+#     if depth == len(cc_info):
+#         count = 0
+#         for i in range(len(arr)):
+#             count += arr[i].count(0)
+#         min_val = min(min_val, count)
+#         return
+#     mode, x, y = cc_info[depth]
+#     for md in cctv[mode]:
+#         temp = copy.deepcopy(arr)
+#         fill(md, x, y, temp)
+#         dfs(depth + 1, temp)
+#
+#
+# min_val = int(1e9)
+# dfs(0, data)
+# print(min_val)
+
+# 문제2 스티커 붙이기
+# 아래는 그냥 runtime 에실행해보면 다 잘 되는데
+# 백준에서 수행시 시간초과
+# 다시풀자
+# import copy
+# import sys
+# input = sys.stdin.readline
+# # 스티커 회전
+# def rotation(sticker, x, y):
+#     # 직사각형인 경우 x, y 크기 교체 필요
+#     temp = [[0] * x for _ in range(y)]
+#     s_position = []
+#     # 회전
+#     for i in range(x):
+#         for j in range(y):
+#             temp[j][x - i - 1] = sticker[i][j]
+#             if sticker[i][j] == 1:
+#                 # 회전된 포지션 저장
+#                 s_position.append((j, x - i - 1))
+#
+#     return temp, s_position
+#
+#
+# def attach(sticker_position, startx, starty):
+#     temp = copy.deepcopy(note)
+#     result = True
+#     for s in sticker_position:
+#         nx = startx + s[0]
+#         ny = starty + s[1]
+#
+#         if nx < 0 or ny < 0 or nx >= n or ny >= m:
+#             result = False
+#             break
+#         if temp[nx][ny] == 1:
+#             result = False
+#             break
+#         # 조건을 모두 만족 하면 스티커 부분 대입
+#         temp[nx][ny] = 1
+#
+#     return temp, result
+#
+#
+# n, m, k = map(int, input().split())
+# note = [[0] * m for i in range(n)]
+#
+# for _ in range(k):
+#     sticker = []
+#     sticker_position = []
+#     sx, sy = map(int, input().split())
+#     for i in range(sx):
+#         data = list(map(int, input().split()))
+#         sticker.append(data)
+#         for j in range(len(data)):
+#             if data[j] == 1:
+#                 # 스티커 좌표 더하기
+#                 sticker_position.append((i, j))
+#
+#     rotation_cnt = 0
+#     attached = False
+#     while not attached:
+#         if rotation_cnt == 4:
+#             break
+#         for i in range(n):
+#             for j in range(m):
+#                 # 해당 칸에 붙이기
+#                 rs_arr, attached = attach(sticker_position, i, j)
+#                 # 붙인 경우 멈추기
+#                 if attached:
+#                     break
+#             if attached:
+#                 break
+#
+#         if not attached:
+#             sticker, sticker_position = rotation(sticker, sx, sy)
+#             sx = len(sticker)
+#             sy = len(sticker[0])
+#             rotation_cnt += 1
+#         else:
+#             note = copy.deepcopy(rs_arr)
+#             break
+#
+# # 스티커 붙은 칸의 수 출력
+# cnt = 0
+# for i in range(n):
+#     cnt += note[i].count(1)
 # print(cnt)
 
 # 다시풀기
