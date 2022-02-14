@@ -53,3 +53,8 @@
 # numvert = map(max, vertices)
 #
 # print(numvert)
+
+from itertools import combinations
+l = [1, 2, 3, 4]
+print(list(combinations(l, 3)))
+
