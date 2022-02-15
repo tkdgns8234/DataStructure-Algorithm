@@ -35,6 +35,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Algorithm/백준/바킹독" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="이진탐색" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
@@ -327,22 +332,22 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/구현/구현.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/구현/구현.py</url>
           <line>155</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/bfs_dfs/bfs_dfs.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/bfs_dfs/bfs_dfs.py</url>
           <line>53</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/백트래킹/백트래킹.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/백트래킹/백트래킹.py</url>
           <line>107</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/시뮬레이션/시뮬레이션.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/시뮬레이션/시뮬레이션.py</url>
           <line>84</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>

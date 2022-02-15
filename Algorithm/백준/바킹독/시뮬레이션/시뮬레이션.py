@@ -304,4 +304,3 @@
 # for candidate in candidates:
 #     result = min(result, dis(candidate))
 # print(result)
-
