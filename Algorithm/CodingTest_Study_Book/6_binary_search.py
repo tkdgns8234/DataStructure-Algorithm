@@ -17,7 +17,7 @@
 
 # 큰 데이터를 사용하는경우 대부분 트리 , 이진탐색구조 사용 (ex) db)
 
-# 이진탐색 구현 재귀
+# 이진탐색.py 구현 재귀
 # array = [1,2,6,7,11,13,16,18,21,32,64,223]
 
 # def binary_search(array, target, start, end):
@@ -42,7 +42,7 @@
 #     print("해당 값은 %d 위치에 존재합니다" % result + 1)
 
 
-# 이진탐색 구현 반복문
+# 이진탐색.py 구현 반복문
 # array = [1,2,6,7,11,13,16,18,21,32,64,223]
 
 # def binary_search(array,target,start,end):
