@@ -60,5 +60,5 @@
 
 # l = [1,2,3,4]
 # l += [1,1,1]
-data =[1,2,3,4]
-print(range(len(data)-1, -1, -1))
+# data =[1,2,3,4]
+# print(range(len(data)-1, -1, -1))
