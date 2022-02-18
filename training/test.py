@@ -62,3 +62,8 @@
 # l += [1,1,1]
 # data =[1,2,3,4]
 # print(range(len(data)-1, -1, -1))
+
+test = []
+test.insert(3, 3)
+test.insert(2, 2)
+print(list(reversed(test)))
