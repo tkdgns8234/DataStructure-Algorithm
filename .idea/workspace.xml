@@ -37,6 +37,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Algorithm/백준/바킹독/개념" />
       <recent name="$PROJECT_DIR$/Algorithm/백준/바킹독" />
     </key>
   </component>
@@ -376,47 +377,47 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/구현/구현.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/개념/구현/구현.py</url>
           <line>155</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/bfs_dfs/bfs_dfs.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/개념/bfs_dfs/bfs_dfs.py</url>
           <line>53</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/백트래킹/백트래킹.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/개념/백트래킹/백트래킹.py</url>
           <line>107</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/시뮬레이션/시뮬레이션.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/개념/시뮬레이션/시뮬레이션.py</url>
           <line>84</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/DP/dp.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/개념/DP/dp.py</url>
           <line>238</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/DP/dp.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/개념/DP/dp.py</url>
           <line>222</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/그리디/그리디.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/개념/그리디/그리디.py</url>
           <line>141</line>
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/그리디/그리디.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/개념/그리디/그리디.py</url>
           <line>143</line>
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/이진탐색/이진탐색.py</url>
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/개념/이진탐색/이진탐색.py</url>
           <line>67</line>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
