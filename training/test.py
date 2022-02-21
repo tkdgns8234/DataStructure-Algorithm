@@ -67,3 +67,28 @@ test = []
 test.insert(3, 3)
 test.insert(2, 2)
 print(list(reversed(test)))
+
+def bfs():
+    while fire_q:
+        x, y = fire_q.popleft()
+        for move in move_type:
+            nx, ny = x+move[0], y+move[1]
+            if nx < 0 or ny < 0 or nx >= n or ny >= m:
+                continue
+            if data[nx][ny] == '#' or dist_fire[nx][ny] > 0:
+                continue
+            dist_fire[nx][ny] = dist_fire[x][y] + 1
+            fire_q.append((nx,ny))
+
+    while jh_q:
+        x, y = jh_q.popleft()
+        for move in move_type:
+            nx, ny = x+move[0], y+move[1]
+            if nx < 0 or ny < 0 or nx >= n or ny >= m:
+                return dist_jh[x][y] + 1
+            if data[nx][ny] == '#' or dist_jh[nx][ny] > 0:
+                continue
+            if dist_fire[nx][ny] == 0 or dist_fire[nx][ny] > dist_jh[x][y] + 1:
+                jh_q.append((nx,ny))
+                dist_jh[nx][ny] = dist_jh[x][y] + 1
+    return 'IMPOSSIBLE'
