@@ -315,3 +315,533 @@
 # print(-1)
 
 # 8. 텀 프로젝트
+# 실패 dfs 정말 어렵다.. 재귀형식
+# import sys
+# input = sys.stdin.readline
+# def dfs(start, index, count):
+#     global visited
+#     if start != index and visited[index]:
+#         return 0
+#     if count != 0 and start == index:
+#         return count
+#     visited[index] = True
+#     return dfs(start, data[index], count + 1)
+#
+# T = int(input())
+# for _ in range(T):
+#     n = int(input())
+#     data = [None] + list(map(int, input().split()))
+#     visited = [False] * (n + 1)
+#     ans = 0
+#
+#     for i in range(1, len(data)):
+#         if not visited[i]:
+#             ans += dfs(i, i, 0)
+#     print(ans)
+
+
+# 아래는 참고한 dfs 소스
+# import sys
+#
+# sys.setrecursionlimit(10 ** 7)
+#
+# input = sys.stdin.readline
+#
+#
+# def dfs(x):
+#     global ans
+#     vis[x] = True
+#     cycle.append(x)
+#     num = arr[x]
+#
+#     if vis[num]:
+#         if num in cycle:
+#             ans += cycle[cycle.index(num):]
+#         return
+#     else:
+#         dfs(num)
+#
+#
+# t = int(input())
+#
+# for _ in range(t):
+#     n = int(input())
+#     arr = [0] + list(map(int, input().split()))
+#     vis = [False] * (n + 1)
+#     ans = []
+#
+#     for i in range(1, n + 1):
+#         if not vis[i]:
+#             cycle = []
+#             dfs(i)
+#
+#     print(n - len(ans))
+
+# 다시풀기
+# 성공
+# import sys
+# sys.setrecursionlimit(100001)
+#
+# def dfs(index):
+#     global ans
+#     visited[index] = True
+#     cycle.append(index)
+#     num = data[index]
+#     if visited[num]:
+#         if num in cycle:
+#             return len(cycle[cycle.index(num):])
+#         else:
+#             return 0
+#     return dfs(num)
+#
+# T = int(input())
+# for _ in range(T):
+#     n = int(input())
+#     data = [None] + list(map(int, input().split()))
+#     visited = [False] * (n + 1)
+#     ans = 0
+#
+#     for i in range(1, len(data)):
+#         if not visited[i]:
+#             cycle = []
+#             ans += dfs(i)
+#     print(len(data)-ans-1)
+
+# 9. 빙산
+# 얼음을 녹인 후 bfs로 탐색하자
+# 시간이 2000ms가 소요된다
+# 짧게는 800ms 까지 가능한것같은데
+# 다시풀자
+# 좀 더 효율적인 bfs 방법이 분명 있어보여
+# 개선을 거친 코드
+
+# from collections import deque
+# import sys
+# input = sys.stdin.readline  # 개선포인트 0
+# move_type = [(-1, 0), (1, 0), (0, 1), (0, -1)]
+#
+# def ice_to_water():
+#     melt = []  # 개선포인트 1 기존엔 temp 배열을가지고 딥카피 하는식으로 했었음, 비효율적이었음
+#     for x in range(n):  # for문을 함수 내에서 직접호출.
+#         for y in range(m):
+#             water_cnt = 0
+#             if data[x][y] != 0:
+#                 for move in move_type:
+#                     nx, ny = x + move[0], y + move[1]
+#                     if nx < 0 or ny < 0 or nx >= n or ny >= m:
+#                         continue
+#                     if data[nx][ny] == 0:
+#                         water_cnt += 1
+#                     melt.append((x, y,  max(0, data[x][y] - water_cnt))) #최솟값은 0
+#     for a, b, c in melt:
+#         data[a][b] = c
+#
+# def bfs():
+#     cnt = 0
+#     visited = [[False] * m for _ in range(n)]
+#     for i in range(n):  # for문을 함수 내에서 직접호출.
+#         for j in range(m):
+#             if not visited[i][j] and data[i][j] != 0:
+#                 cnt += 1
+#                 visited[i][j] = True
+#                 q = deque()
+#                 q.append((i, j))
+#                 while q:
+#                     x, y = q.popleft()
+#                     for move in move_type:
+#                         nx, ny = x + move[0], y + move[1]
+#                         if nx < 0 or ny < 0 or nx >= n or ny >= m:
+#                             continue
+#                         if data[nx][ny] > 0 and not visited[nx][ny]:
+#                             visited[nx][ny] = True
+#                             q.append((nx, ny))
+#     return cnt
+#
+#
+# n, m = map(int, input().split())
+# data = [list(map(int, input().split())) for i in range(n)]
+# passed = 0
+# while True: # 개선포인트 2 while 문을 조금 더 단순화, 함수안에서 필요한것들을 모두 처리, 중복 for문등 다 함수 안으로
+#     cnt = bfs()
+#     if cnt >= 2:
+#         print(passed)
+#         break
+#     elif cnt == 0:
+#         print(0)
+#         break
+#
+#     ice_to_water()
+#     passed += 1
+
+# 훨씬 더 좋아보이는 코드
+# count 라는 변수를 둬서 주변의 water count를 센다.
+# import sys
+# from collections import deque
+#
+# input = sys.stdin.readline
+# n, m = map(int, input().split())
+# graph = []
+# for i in range(n):
+#     graph.append(list(map(int, input().split())))
+#
+# check = False
+# dx = [-1, 1, 0, 0]
+# dy = [0, 0, -1, 1]
+#
+#
+# def bfs(x, y):
+#     q = deque()
+#     q.append([x, y])
+#     while q:
+#         x, y = q.popleft()
+#         for i in range(4):
+#             nx = x + dx[i]
+#             ny = y + dy[i]
+#             if 0 <= nx < n and 0 <= ny < m:
+#                 if graph[nx][ny] == 0:
+#                     count[x][y] += 1
+#                 elif graph[nx][ny] != 0 and not visited[nx][ny]:
+#                     visited[nx][ny] = True
+#                     q.append([nx, ny])
+#     return 1
+#
+#
+# year = 0
+# while True:
+#     visited = [[False] * m for _ in range(n)]
+#     count = [[0] * m for _ in range(n)]
+#     result = []
+#     for i in range(n):
+#         for j in range(m):
+#             if graph[i][j] != 0 and not visited[i][j]:
+#                 visited[i][j] = True
+#                 result.append(bfs(i, j))
+#
+#     for i in range(n):
+#         for j in range(m):
+#             if graph[i][j] != 0:
+#                 graph[i][j] -= count[i][j]
+#                 if graph[i][j] < 0:
+#                     graph[i][j] = 0
+#
+#     if len(result) == 0:
+#         break
+#     if len(result) >= 2:
+#         check = True
+#         break
+#     year += 1
+#
+# if check:
+#     print(year)
+# else:
+#     print(0)
+
+# 10. 다리 만들기
+# 성공했지만 시간, 공간복잡도가 너무 비효율적이야
+# 좀 더 효율적인 방법을 찾아보자
+# import copy
+# from collections import deque
+# n = int(input())
+# data = [list(map(int, input().split())) for i in range(n)]
+# move_type = [(-1, 0), (1, 0), (0, 1), (0, -1)]
+#
+# def bfs (x, y):
+#     visited[x][y] = True
+#     visited2[x][y] = True
+#     point.append((x,y))
+#     q = deque()
+#     q.append((x, y))
+#     while q:
+#         x, y = q.popleft()
+#         for move in move_type:
+#             nx, ny = x + move[0], y + move[1]
+#             if nx < 0 or ny < 0 or nx >= n or ny >= n:
+#                 continue
+#             if not visited[nx][ny] and data[nx][ny] == 1:
+#                 q.append((nx, ny))
+#                 point.append((nx, ny))
+#                 visited[nx][ny] = True
+#                 visited2[nx][ny] = True
+#
+# def make_bridge(x, y):
+#     temp = copy.deepcopy(visited2)
+#     q = deque()
+#     q.append((x, y, 0))
+#     while q:
+#         x, y, dist = q.popleft()
+#         for move in move_type:
+#             nx, ny = x + move[0], y + move[1]
+#             if nx < 0 or ny < 0 or nx >= n or ny >= n:
+#                 continue
+#             if not temp[nx][ny]:
+#                 if data[nx][ny] == 1:
+#                     return dist
+#                 else:
+#                     q.append((nx, ny, dist+1))
+#                     temp[nx][ny] = True
+#     return int(1e9) # 못 찾은경우
+#
+# # 섬 찾기 # 찾은경우 모두 방문표시
+# min_val = int(1e9)
+# visited =[[False] * n for _ in range(n)]
+# for i in range(n):
+#     for j in range(n):
+#         if not visited[i][j] and data[i][j] == 1:
+#             visited2 = [[False] * n for _ in range(n)]
+#             point = []
+#             bfs(i, j)
+#
+#             for a, b in point:
+#                 min_val = min(min_val, make_bridge(a, b))
+#
+# print(min_val)
+
+# 다리 만들기 참고 코드
+# 와... 이렇게 풀 수 있구나 결국 문제에서 요구하는건 각 섬 좌표간의 최단거리만 구하면 되니까
+# x1-x2 + y1-y2 - 1 => 최단거리
+# 아래 코드의 풀이 방식 1. 각 섬마다 [[]] 배열을 하나 만들고 좌표를 모두 저장
+# 각 좌표간의 차이중 최솟값을 print 아주 간단해..
+# 문제의 핵심을 이해하고 아주 효율적으로 짰어
+
+
+# import sys
+# import collections
+# import itertools
+# import heapq
+#
+# dy = [1, 0, -1, 0]
+# dx = [0, 1, 0, -1]
+#
+# R = lambda : sys.stdin.readline().rstrip()
+# MIS = lambda : map(int, R().split())
+#
+# N = int(R())
+# L = [list(MIS()) for _ in range(N)]
+# visited = [[0]*N for _ in range(N)]
+# num = 1
+# t = []
+# que = collections.deque()
+# for i in range(N):
+#     for j in range(N):
+#         if visited[i][j] or L[i][j] == 0: continue
+#         que.append((i, j))
+#         visited[i][j] = num
+#         t.append([])
+#         t[-1].append((i, j))
+#         while que:
+#             y, x = que.pop()
+#             for d in range(4):
+#                 ry = y+dy[d]
+#                 rx = x+dx[d]
+#                 if 0 <= ry < N and 0 <= rx < N and visited[ry][rx] == 0 and L[ry][rx]:
+#                     visited[ry][rx] = num
+#                     que.append((ry, rx))
+#                     t[-1].append((ry, rx))
+#         num += 1
+#
+# ans = 100000
+# for i in range(len(t)):
+#     for j in range(i+1, len(t)):
+#         for a, b in t[i]:
+#             for x, y in t[j]:
+#                 ans = min(ans, abs(a-x)+abs(b-y)-1)
+# print(ans)
+
+# 다리만들기 참고 코드
+# 내가 풀었던 방식과 유사하나
+# 훨씬 빠르고 공간복잡도가 좋았던 이유:
+# 포인트는 2개다
+# 1. 입력받은 지도의 섬을 구분하기위해 섬1 = 1로표시하고 섬2 =2로표시하도록 했다
+# = > visited 는 하나면되고 입력받은 지도의 섬 좌표를 1,2,3 으로 나타내는방식
+# 2. 모든 좌표에서 최단거리를 구하는건 동일한데,
+# 나는 각 좌표마다 따로 돌았고 이사람은 모든 좌표를 한번에 넣어서 돌렸다 최단거리 찾는걸
+
+
+# from collections import deque
+#
+# def boundary(r, c):
+#     if (0 <= r < N) and (0 <= c < N):
+#         return True
+#     return False
+#
+# def find_island(i, sr, sc):
+#     result = deque()
+#
+#     visit[sr][sc] = True
+#
+#     que = deque()
+#     que.append((sr, sc))
+#
+#     while que:
+#         nr, nc = que.popleft()
+#         board[nr][nc] = i
+#         result.append((nr, nc, 0))
+#
+#         for d in dx:
+#             nxr, nxc = nr + d[0], nc + d[1]
+#             if not boundary(nxr, nxc) or board[nxr][nxc] == 0 or visit[nxr][nxc]:
+#                 continue
+#
+#             visit[nxr][nxc] = True
+#             board[nxr][nxc] = i
+#             que.append((nxr, nxc))
+#
+#     return result
+#
+#
+# def find_bridge(island, i):
+#     visit = [[False] * N for _ in range(N)]
+#
+#     while island:
+#         nr, nc, nl = island.popleft()
+#
+#         for d in dx:
+#             nxr, nxc, nxl = nr + d[0], nc + d[1], nl + 1
+#             if not boundary(nxr, nxc) or board[nxr][nxc] == i or visit[nxr][nxc]:
+#                 continue
+#
+#             if board[nxr][nxc] > 0:
+#                 return nl
+#             else:
+#                 visit[nxr][nxc] = True
+#                 island.append((nxr, nxc, nxl))
+#
+#
+# dx = ((-1, 0), (1, 0), (0, -1), (0, 1))
+# N = int(input())
+# board = [list(map(int, input().split())) for _ in range(N)]
+#
+# islands = [None]
+# visit = [[False] * N for _ in range(N)]
+# for r in range(N):
+#     for c in range(N):
+#         if board[r][c] == 1 and not visit[r][c]:
+#             islands.append(find_island(len(islands), r, c))
+#
+# ans = N ** 2
+# for i in range(1, len(islands)):
+#     island = islands[i]
+#     ans = min(find_bridge(island, i), ans)
+#
+# print(ans)
+
+# 문제 11 숨바꼭질
+# 최단거리 문제이기떄문에 bfs 로 해결
+# 목표지점까지 발생하는 비용이 다르기때문에 *2 를 먼저처리해야한다(다익스트라 알고리즘을 떠올려보자 원리는 동일하다)
+# 연산 또한 곱셈 부터 처리해야한다 큐에만 먼저 넣는다고 되는것이 아니다 //반례: 1 3
+
+# from collections import deque
+# import sys
+# PLUS = 2
+# MINUS = 1
+# MULTIPLE = 0
+# n, target = map(int, sys.stdin.readline().split())
+# visited = [False] * 200001
+#
+# q = deque()
+# q.append((n, 0))
+# visited[n] = True
+# while q:
+#     x, time = q.popleft()
+#     if x == target:
+#         print(time)
+#         break
+#     for oper in range(3):
+#         temp = time
+#         nx = x
+#         if oper == PLUS:
+#             nx, temp = nx + 1, temp + 1
+#         elif oper == MINUS:
+#             nx, temp = nx - 1, temp + 1
+#         elif oper == MULTIPLE:
+#             nx = x * 2
+#         if 0 <= nx <= 200000 and not visited[nx]:
+#             visited[nx] = True
+#             if oper == MULTIPLE:
+#                 q.appendleft((nx, temp))
+#             else:
+#                 q.append((nx, temp))
+
+
+# 아래 코드처럼 방문 확인을 가중치 형태로 하면 원하는 답을 얻을 수 있기도 하다
+# 개선된 다익스트라에선 visited 가 아니라 dist 로 이미 방문했는지 확인했었지. 여기서말하는 가중치가 dist 와 동일해
+# 가중치 (dist)가 더 짧다면 이미 처리된 노드로 방문 처리
+
+# from collections import deque
+# def bfs(x):
+#     q = deque([x])		# 다익스트라와 달리 가중치(시간) 없음!
+#     time = [-1] * MAX		# 중복방문을 위한 가중치행렬
+#     time[x] = 0
+#
+#     while q:
+#         cx = q.popleft()
+#         if cx == k:
+#             return time[cx]
+#
+#         for i in range(3):
+#             if i == 0:
+#                 nx = cx - 1
+#             elif i == 1:
+#                 nx = cx + 1
+#             else:
+#                 nx = cx * 2
+#
+#             if not 0 <= nx < MAX:	# 조건 검사 역시 다익스트라와 동일
+#                 continue
+#             if time[nx] != -1 and time[nx] <= time[cx]:
+#                 continue
+#
+#             if i < 2:			# 한 칸씩 이동하는 경우 큐 뒤에 삽입
+#                 q.append(nx)
+#                 time[nx] = time[cx] + 1
+#             else:			# 순간이동하는 경우 큐 앞에 삽입
+#                 q.appendleft(nx)
+#                 time[nx] = time[cx]
+#
+#
+# n, k = map(int, input().split())
+# MAX = 100001
+# print(bfs(n))
+
+# 문제 12 말이 되고픈 원숭이
+# 벽돌 부수기와 매우 유사해보여 말처럼 이동한 횟수를 3차원배열 위치에 표시하도록 해보자
+# import sys
+# from collections import deque
+# input = sys.stdin.readline
+#
+# move_type = [(-1, 0), (1, 0), (0, 1), (0, -1)]
+# horse_move_type = [(-1, -2), (-2, -1), (-2, 1), (-1, 2),
+#       (1, -2), (2, -1), (2, 1), (1, 2)]
+#
+# k = int(input())
+# m, n = map(int, input().split())
+# data = [list(map(int, input().split())) for _ in range(n)]
+#
+# dist = [[[0] * (k+1) for _ in range(m)] for _ in range(n)]
+# dist[0][0][0] = 1
+#
+# q = deque()
+# q.append((0,0,0))
+#
+# while q:
+#     x, y, horse = q.popleft()
+#     if x == n-1 and y == m-1:
+#         print(dist[x][y][horse]-1)
+#         exit(0)
+#     for move in move_type:
+#         nx, ny = x + move[0], y + move[1]
+#         if nx < 0 or ny < 0 or nx >= n or ny >= m:
+#             continue
+#         if data[nx][ny] == 0 and dist[nx][ny][horse] == 0:
+#             dist[nx][ny][horse] = dist[x][y][horse] + 1
+#             q.append((nx, ny, horse))
+#     if horse < k:
+#         for move in horse_move_type:
+#             nx, ny = x + move[0], y + move[1]
+#             if nx < 0 or ny < 0 or nx >= n or ny >= m:
+#                 continue
+#             if data[nx][ny] == 0 and dist[nx][ny][horse+1] == 0:
+#                 dist[nx][ny][horse+1] = dist[x][y][horse] + 1
+#                 q.append((nx, ny, horse+1))
+#
+# print(-1)

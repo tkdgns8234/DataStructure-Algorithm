@@ -346,8 +346,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.bfs_dfs" />
-        <item itemvalue="Python.q_백준" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.q_백준" />
         <item itemvalue="Python.연결리스트" />
       </list>
     </recent_temporary>
@@ -463,6 +463,31 @@
           <line>4</line>
           <option name="timeStamp" value="110" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/bfs_dfs.py</url>
+          <line>374</line>
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/bfs_dfs.py</url>
+          <line>322</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/bfs_dfs.py</url>
+          <line>406</line>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/bfs_dfs.py</url>
+          <line>641</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/bfs_dfs.py</url>
+          <line>776</line>
+          <option name="timeStamp" value="184" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -472,10 +497,5 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="graph" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

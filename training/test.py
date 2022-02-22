@@ -63,32 +63,44 @@
 # data =[1,2,3,4]
 # print(range(len(data)-1, -1, -1))
 
-test = []
-test.insert(3, 3)
-test.insert(2, 2)
-print(list(reversed(test)))
+# test = []
+# test.insert(3, 3)
+# test.insert(2, 2)
+# print(list(reversed(test)))
+#
+# def bfs():
+#     while fire_q:
+#         x, y = fire_q.popleft()
+#         for move in move_type:
+#             nx, ny = x+move[0], y+move[1]
+#             if nx < 0 or ny < 0 or nx >= n or ny >= m:
+#                 continue
+#             if data[nx][ny] == '#' or dist_fire[nx][ny] > 0:
+#                 continue
+#             dist_fire[nx][ny] = dist_fire[x][y] + 1
+#             fire_q.append((nx,ny))
+#
+#     while jh_q:
+#         x, y = jh_q.popleft()
+#         for move in move_type:
+#             nx, ny = x+move[0], y+move[1]
+#             if nx < 0 or ny < 0 or nx >= n or ny >= m:
+#                 return dist_jh[x][y] + 1
+#             if data[nx][ny] == '#' or dist_jh[nx][ny] > 0:
+#                 continue
+#             if dist_fire[nx][ny] == 0 or dist_fire[nx][ny] > dist_jh[x][y] + 1:
+#                 jh_q.append((nx,ny))
+#                 dist_jh[nx][ny] = dist_jh[x][y] + 1
+#     return 'IMPOSSIBLE'
+# import sys
+# input = sys.stdin.readline
+# a = list(map(int, list(input().split())))
+# print(a)
+import sys
+input = sys.stdin.readline
 
-def bfs():
-    while fire_q:
-        x, y = fire_q.popleft()
-        for move in move_type:
-            nx, ny = x+move[0], y+move[1]
-            if nx < 0 or ny < 0 or nx >= n or ny >= m:
-                continue
-            if data[nx][ny] == '#' or dist_fire[nx][ny] > 0:
-                continue
-            dist_fire[nx][ny] = dist_fire[x][y] + 1
-            fire_q.append((nx,ny))
-
-    while jh_q:
-        x, y = jh_q.popleft()
-        for move in move_type:
-            nx, ny = x+move[0], y+move[1]
-            if nx < 0 or ny < 0 or nx >= n or ny >= m:
-                return dist_jh[x][y] + 1
-            if data[nx][ny] == '#' or dist_jh[nx][ny] > 0:
-                continue
-            if dist_fire[nx][ny] == 0 or dist_fire[nx][ny] > dist_jh[x][y] + 1:
-                jh_q.append((nx,ny))
-                dist_jh[nx][ny] = dist_jh[x][y] + 1
-    return 'IMPOSSIBLE'
+k = int(input())
+m, n = map(int, input().split())
+print(m, n)
+data = [list(map(int, input().split())) for _ in range(n)]
+print(data)
