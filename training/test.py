@@ -96,11 +96,77 @@
 # input = sys.stdin.readline
 # a = list(map(int, list(input().split())))
 # print(a)
-import sys
-input = sys.stdin.readline
+# import sys
+# input = sys.stdin.readline
+#
+# k = int(input())
+# m, n = map(int, input().split())
+# print(m, n)
+# data = [list(map(int, input().split())) for _ in range(n)]
+# print(data)
 
-k = int(input())
-m, n = map(int, input().split())
-print(m, n)
-data = [list(map(int, input().split())) for _ in range(n)]
-print(data)
+# array = [[] for i in range(5)]
+#
+# for i in range(5):
+#     for j in range(1, 9):
+#         array[i].append(j + 8 * i)
+#
+# print(*array, sep='\n')
+#
+# n = 2
+# m = 3
+#
+# for i in range(5 - n):
+#     for j in range(8 - m):
+#         sample_matrix = [row[j:j + 3] for row in array[i:i + 2]]
+#         print(*sample_matrix, sep='\n')
+#         print()
+
+# 2차원배열 slice
+# data = [list(map(int, input().split())) for _ in range(9)]
+# length= 9
+#
+# for i in range(0, length, length // 3):
+#     for j in range(0, length, length // 3):
+#         print(*[row[j:j + length // 3] for row in data[i:i + length // 3]], sep="\n")
+#         print()
+
+# 배열
+# test = []
+# test.append([])
+# test[-1].append(111)
+# test.append([])
+# test[-1].append(222)
+# print(test)
+#
+# data = [[1,2,3,4,5], [6,7,8,9,10]]
+# data[0][1:3] = [0,0]
+# print(data)
+
+# data = [1,2,3,4,5,6]
+# data[0:5] = [0,0,0,0,0]
+# print(data)
+
+# 5. 별 찍기 - 10
+# 아래 방법 좋은데, 배열이 너무많아져 4차원,6차원... 값을 어떻게 찍을지도 문제다
+# 풀이를 찾아보자..
+# 아래 코드는 실패
+def reculsive(num):
+    if num == 1:
+        return '*'
+    priv = reculsive(num//3)
+    arr = []
+
+    for i in range(3):
+        for j in range(3):
+            if num//3 <= i < num//3*2:
+                if num//3 <= j < num//3*2:
+                    arr.append(' ')
+                    continue
+            arr.append(priv)
+    return arr
+
+n = int(input()) # 3
+print(reculsive(n))
+print('\n'.join(reculsive(n)))
+# rs = reculsive(n)
