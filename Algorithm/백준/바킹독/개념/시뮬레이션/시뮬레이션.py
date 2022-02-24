@@ -3,6 +3,7 @@
 # # 감탄스럽다 아래 주소의 코드
 # # #https://developer-ellen.tistory.com/53
 # # 좌 우 상 하
+# 이거 백트래킹으로 풀었네 백트래킹 + bfs 로 푸니 별거 없어보이긴 하네?
 # import copy
 # n, m = map(int, input().split())
 # cc_info = []
@@ -270,6 +271,69 @@
 # data = [list(map(int, input().split())) for i in range(n)]
 # dfs(0)
 # print(max_val)
+
+
+# import sys
+# import copy
+#
+# n = int(input())
+#
+# arr = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
+# ans = 0
+#
+# rotate_now = 0
+#
+# def rotate(m):
+#     global arr
+#     global rotate_now
+#     x = len(arr)
+#     y = len(arr[0])
+#     temp = [[0] * x for _ in range(y)]
+#
+#     start = -1
+#     while start < m:
+#         for i in range(x):
+#             for j in range(y):
+#                 temp[j][x - i - 1] = arr[i][j]
+#         start += 1
+#         arr = copy.deepcopy(temp)
+#     return
+#
+# def move(idx):
+#     rotate(idx)
+#     # 0부터 3까지 상,하,좌,우 를 의미
+#     for i in range(n):
+#         idx = 0
+#         for j in range(1, n):
+#             if arr[i][j]:
+#                 temp = arr[i][j]
+#                 arr[i][j] = 0
+#                 if arr[i][idx] == 0:
+#                     arr[i][idx] = temp
+#                 elif arr[i][idx] == temp:
+#                     arr[i][idx] = temp * 2
+#                     idx += 1
+#                 else:
+#                     idx += 1
+#                     arr[i][idx] = temp
+#
+#
+# def dfs(count):
+#     global ans, arr
+#     if count == 5:
+#         for i in range(n):
+#             ans = max(ans, max(arr[i]))
+#         return
+#
+#     tmp = copy.deepcopy(arr)
+#     for i in range(4):
+#         move(i)
+#         dfs(count + 1)
+#         arr = copy.deepcopy(tmp)
+#
+#
+# dfs(0)
+# print(ans)
 
 # 치킨 배달
 # from itertools import combinations
