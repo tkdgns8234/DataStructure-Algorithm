@@ -688,31 +688,189 @@ import copy
 # 그리 어려운 문제는 아니었다 랭크에 쫄지말자
 # 시간복잡도:(4*3*3*3 4방향이동 * (n-2)) * 2 * 10 공간복잡도:n**2m**2 방문처리때문
 # .는 빈칸 #는 벽 0은 구멍
-import sys
-from collections import deque
-input = sys.stdin.readline()
-n, m = map(int, input().split())
-data = []
-red_pos, blue_pos = (0, 0), (0, 0)
-visited = [False]
-for i in range(n):
-    line = list(input().rstrip())
-    data.append(line)
-    for j in range(m):
-        if line[j] == 'R':
-            red_pos = (i, j)
-        elif line[j] == 'B':
-            blue_pos = (i, j)
+# import sys
+# from collections import deque
+# input = sys.stdin.readline
+#
+# # 한 방향씩 기울여야함
+# move_type = [(-1, 0), (1, 0), (0, 1), (0, -1)]
+# def move(direction, x, y):
+#     count = 0
+#     while True:
+#         nx, ny = x + direction[0], y + direction[1]
+#         if data[nx][ny] == '#':
+#             return x, y, count, False
+#         if data[nx][ny] == 'O':
+#             return 0, 0, 0, True
+#         x, y = nx, ny
+#         count += 1
+#
+# # red, blue 구슬을 한번에 굴린다.
+# def bfs():
+#     global min_val, visited
+#     rx, ry, bx, by = red_pos[0], red_pos[1], blue_pos[0], blue_pos[1]
+#     q = deque([[rx, ry, bx, by, 0]])  # 0: count
+#     visited[rx][ry][bx][by] = True
+#
+#     while q:
+#         rx, ry, bx, by, count = q.popleft()
+#         # if count > min_val: # 최적화 <- 필요가 없다, nr_result 값인 red 구슬이 첫번째로 들어갔을 때가 정답이고
+#         # 바로 return 하면 됨, bfs의 특징
+#         #     continue
+#         if count >= 10:
+#             return
+#         for mv in move_type:
+#             nrx, nry, nr_count, nr_result = move(mv, rx, ry)
+#             nbx, nby, nb_count, nb_result = move(mv, bx, by)
+#
+#             if nb_result: #blue가 빠진경우 skip
+#                 continue
+#             if nr_result:
+#                 min_val = min(min_val, count + 1)
+#                 return
+#             if nrx == nbx and nry == nby: # 좌표가 동일하고
+#                 if nr_count < nb_count: # 더 멀리서 온 경우 한칸 전으로 이동
+#                     nbx, nby = nbx - mv[0], nby - mv[1]
+#                 else:
+#                     nrx, nry = nrx - mv[0], nry - mv[1]
+#
+#             if not visited[nrx][nry][nbx][nby]:
+#                 q.append((nrx,nry,nbx,nby,count + 1))
+#                 visited[nrx][nry][nbx][nby] = True
+#
+#
+# n, m = map(int, input().split())
+# data = []
+# red_pos, blue_pos = (0, 0), (0, 0)
+# # visited = [[[False] * m for _ in range(n)] * m for _ in range(n)] 틀림, 유의
+# visited = [[[[False]*m for _ in range(n)] for _ in range(m)] for _ in range(n)]
+#
+# for i in range(n):
+#     line = list(input().rstrip())
+#     data.append(line)
+#     for j in range(m):
+#         if line[j] == 'R':
+#             red_pos = (i, j)
+#         elif line[j] == 'B':
+#             blue_pos = (i, j)
+# min_val = int(1e9)
+# bfs()
+# print(min_val if min_val != int(1e9) else -1)
 
-# 한 방향씩 기울여야함
-move_type = [(-1, 0), (1, 0), (0, 1), (0, -1)]
-def move():
-    pass
+# 9. 연구소
+# 3개를 설치하는 모든 경우의 수
+# 바이러스 위치 저장, bfs
+# 최대 8*8
+# 시간복잡도: (64C3) * (nm) bfs
+# 정~~~말 잘했다 시간소요 300ms 인데 랭킹 29등이야!!
+# 백트래킹으로도 3개를 설치하는 모든 경우의수 계산이 가능하네
+# from itertools import combinations
+# import sys
+# from collections import deque
+#
+# input = sys.stdin.readline
+#
+# INF = int(1e9)
+# n, m = map(int, input().split())
+# visited = [[0] * m for _ in range(n)]
+# visited_num = 0
+# data = []  # 0 빈칸, 1 벽, 2 바이러스
+# virus = []
+# empty = [] # 빈칸 위치 저장
+# wall_cnt = 3 # 3개 추가되기 때문
+# for i in range(n):
+#     row = list(map(int, input().rstrip().split()))
+#     for j in range(len(row)):
+#         if row[j] == 2:
+#             virus.append((i, j))
+#         elif row[j] == 0:
+#             empty.append(m * i + j)  # 빈칸의 위치는 0 ~ nm 형태로 나타냄
+#         else:
+#             wall_cnt += 1
+#     data.append(row)
+#
+# move_type = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+#
+#
+# def bfs():
+#     global visited_num, max_val
+#     visited_num += 1
+#     q = deque(virus)
+#     count = len(virus)
+#
+#     while q:
+#         x, y = q.popleft()
+#         for move in move_type:
+#             nx, ny = x + move[0], y + move[1]
+#             if point_validator(nx, ny):
+#                 q.append((nx, ny))
+#                 visited[nx][ny] = visited_num
+#                 count += 1
+#     max_val = max(max_val, n * m - count - wall_cnt)
+#
+#
+# def point_validator(x, y):
+#     if x < 0 or y < 0 or x >= n or y >= m:
+#         return False
+#     if visited[x][y] == visited_num or data[x][y] != 0:
+#         return False
+#     return True
+#
+#
+# max_val = 0
+# # 빈칸에서 벽 3개를 설치하는 모든 경우의 수
+# for case in combinations(empty, 3):
+#     for c in case:
+#         data[c // m][c % m] = 1
+#     bfs()
+#     for c in case:
+#         data[c // m][c % m] = 0
+#
+# print(max_val)
 
-# red, blue 구슬을 한번에 굴린다.
-def bfs():
-    q = deque([red_pos[0], red_pos[1], blue_pos[0], blue_pos[1]])
+# 10. 연산자 끼워넣기
+# 백트래킹?
+# n == 11 개면  연산자 모든 경우의수 10개
+# 10개 중 10개 놓는 모든 경우의 수 10P10 /6 최소한 중복되는수
+# 성공!
 
-    pass
+# import sys
+# input = sys.stdin.readline
+#
+# n = int(input())
+# num_list = list(map(int, input().rstrip().split()))
+# op = list(map(int, input().rstrip().split())) # 덧셈, 뺄셈, 곱셈, 나눗셈
+#
+# def btk(depth, total, index):
+#     global max_val, min_val
+#
+#     if depth == n - 1:
+#         max_val = max(max_val, total)
+#         min_val = min(min_val, total)
+#         return
+#
+#     for i in range(4):
+#         if op[i] > 0:
+#             op[i] -= 1
+#             if i == 0:
+#                 temp = total + num_list[index]
+#             if i == 1:
+#                 temp = total - num_list[index]
+#             if i == 2:
+#                 temp = total * num_list[index]
+#             if i == 3:
+#                 if total < 0:
+#                     temp = -(abs(total) // num_list[index])
+#                 else:
+#                     temp = total // num_list[index]
+#             btk(depth + 1, temp, index + 1)
+#             op[i] += 1
+#
+#
+# min_val = int(1e9)+1
+# max_val = int(-1e9)-1
+# btk(0, num_list[0], 1)
+# print(max_val)
+# print(min_val)
 
-bfs()
+# 11. 스타트와 링크
