@@ -687,3 +687,32 @@ import copy
 # 8. 구슬 탈출 2
 # 그리 어려운 문제는 아니었다 랭크에 쫄지말자
 # 시간복잡도:(4*3*3*3 4방향이동 * (n-2)) * 2 * 10 공간복잡도:n**2m**2 방문처리때문
+# .는 빈칸 #는 벽 0은 구멍
+import sys
+from collections import deque
+input = sys.stdin.readline()
+n, m = map(int, input().split())
+data = []
+red_pos, blue_pos = (0, 0), (0, 0)
+visited = [False]
+for i in range(n):
+    line = list(input().rstrip())
+    data.append(line)
+    for j in range(m):
+        if line[j] == 'R':
+            red_pos = (i, j)
+        elif line[j] == 'B':
+            blue_pos = (i, j)
+
+# 한 방향씩 기울여야함
+move_type = [(-1, 0), (1, 0), (0, 1), (0, -1)]
+def move():
+    pass
+
+# red, blue 구슬을 한번에 굴린다.
+def bfs():
+    q = deque([red_pos[0], red_pos[1], blue_pos[0], blue_pos[1]])
+
+    pass
+
+bfs()
