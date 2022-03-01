@@ -347,11 +347,11 @@ from collections import deque
 #
 # solv()
 
-n, m = 2, 2
-visited = [[[[False] * m for _ in range(n)] * m] for _ in range(n)]
-visited2 = [[[[False]*m for _ in range(n)] for _ in range(m)] for _ in range(n)]
-
-visited2[1][1][1][1] = 1
-print(visited)
-print()
-print(visited2)
+# n, m = 2, 2
+# visited = [[[[False] * m for _ in range(n)] * m] for _ in range(n)]
+# visited2 = [[[[False]*m for _ in range(n)] for _ in range(m)] for _ in range(n)]
+#
+# visited2[1][1][1][1] = 1
+# print(visited)
+# print()
+# print(visited2)

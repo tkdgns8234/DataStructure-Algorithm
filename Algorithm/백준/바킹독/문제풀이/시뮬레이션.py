@@ -874,3 +874,322 @@ import copy
 # print(min_val)
 
 # 11. 스타트와 링크
+# 시간복잡도 20C10 * 10 -> 간신히 될거같은데
+# 블로그 참조, 다시풀기
+# import sys
+# from itertools import combinations
+# input = sys.stdin.readline
+# n = int(input())
+# data = [list(map(int, input().rstrip().split())) for _ in range(n)]
+# data_total = sum(map(sum, data))
+#
+# def btk(comb, depth, total):
+#     global result
+#
+#     if depth == n//2:
+#         result = min(result, abs(total - abs(data_total - total)))
+#         return
+#
+#     for k in range(n//2):
+#         if k == depth:
+#             continue
+#         total = total + data[comb[depth]][comb[k]]
+#     btk(comb, depth + 1, total)
+#
+#
+# result = int(1e9)
+# for comb in combinations(range(n), n//2):
+#     btk(comb, 0, 0)
+#     if result == 0:
+#         print(result)
+#         break
+# print(result)
+
+
+# 블로그참조
+# 정말 쉽구나..
+# 다시풀자
+# 궁금하니 bfs 풀이도 한번 보자
+# from itertools import combinations as c
+#
+# n = int(input())
+# array = [i for i in range(n)]
+# matrix = []
+# for _ in range(n):
+#     matrix.append((list(map(int, input().split()))))
+# result = int(1e9)
+# for r1 in c(array, n//2):
+#     start, link = 0, 0
+#     r2 = list(set(array) - set(r1))
+#     for r in c(r1, 2):
+#         start += matrix[r[0]][r[1]]
+#         start += matrix[r[1]][r[0]]
+#     for r in c(r2, 2):
+#         link += matrix[r[0]][r[1]]
+#         link += matrix[r[1]][r[0]]
+#     result = min(result, abs(start-link))
+# print(result)
+
+
+# 12. 경사로
+# 실패 다시풀기
+# 문제점 1. 코드가 길어졌어
+# 원인은? 구현을 어떻게 할지는 정하고 시작했는데
+# 1. check 함수에서 매개변수 하나로 row, col 동시에 처리할순없을까 고민을 했었어야했어
+# 2. while문보단 for 문을쓰는게 훨씬 깔끔해지고 편해져
+# 급하다고 코드를 막 치지 말고 조금만 더 생각하면서 치자..
+# 다시풀자
+
+# import sys
+# input = sys.stdin.readline
+# ROW = 0
+# COLUM = 1
+#
+# def check(x, y, direction):
+#     if direction == ROW:
+#         if x==0:
+#             print(x)
+#         build_point = []
+#         while y < N-1:
+#             if data[x][y] == data[x][y + 1]:
+#                 y += 1
+#                 continue
+#             elif data[x][y] - data[x][y + 1] == 1: #높이 차이가1인경우 왼쪽이 더 높음
+#                 if N - y >= L: #경사로 길이만큼 설치 가능 여부 확인
+#                     temp = y
+#                     if L == 1:
+#                         if temp not in build_point:
+#                             build_point.append(temp)
+#                         else:
+#                             return False
+#                         y+=1
+#                         continue
+#
+#                     for _ in range(L-1):
+#                         if temp in build_point or (temp+1) in build_point:
+#                             return False
+#                         if data[x][temp] == data[x][temp + 1]:
+#                             build_point.append(temp)
+#                             temp += 1
+#                         else:
+#                             return False
+#                     build_point.append(temp + 1)
+#                 else:
+#                     return False
+#             elif data[x][y] - data[x][y + 1] == -1: #높이 차이가-1인경우 오른쪽이 더 높음
+#                 if y >= L-1: #경사로 길이만큼 설치 가능 여부 확인
+#                     temp = y
+#                     if L == 1:
+#                         if temp not in build_point:
+#                             build_point.append(temp)
+#                         else:
+#                             return False
+#                         y+=1
+#                         continue
+#
+#                     for _ in range(L-1):
+#                         if temp in build_point or (temp-1) in build_point:
+#                             return False
+#                         if data[x][temp] == data[x][temp-1]:
+#                             build_point.append(temp)
+#                             temp -= 1
+#                         else:
+#                             return False
+#                     build_point.append(temp - 1)
+#                 else:
+#                     return False
+#             else:
+#                 return False
+#             y += 1
+#
+#     elif direction == COLUM:
+#         build_point = []
+#         while x < N-1:
+#             if data[x][y] == data[x + 1][y]:
+#                 x += 1
+#                 continue
+#             elif data[x][y] - data[x + 1][y] == 1: #높이 차이가1인경우 왼쪽이 더 높음
+#                 if N - x >= L: #경사로 길이만큼 설치 가능 여부 확인
+#                     temp = x
+#                     if L == 1:
+#                         if temp not in build_point:
+#                             build_point.append(temp)
+#                         else:
+#                             return False
+#                         x+=1
+#                         continue
+#
+#                     for _ in range(L-1):
+#                         if temp in build_point or (temp+1) in build_point:
+#                             return False
+#                         if data[temp][y] == data[temp+1][y]:
+#                             build_point.append(temp)
+#                             temp += 1
+#                         else:
+#                             return False
+#                     build_point.append(temp + 1)
+#                 else:
+#                     return False
+#             elif data[x][y] - data[x+1][y] == -1: #높이 차이가-1인경우 오른쪽이 더 높음
+#                 if x >= L-1: #경사로 길이만큼 설치 가능 여부 확인
+#                     temp = x
+#                     if L == 1:
+#                         if temp not in build_point:
+#                             build_point.append(temp)
+#                         else:
+#                             return False
+#                         x+=1
+#                         continue
+#
+#                     for _ in range(L-1):
+#                         if temp in build_point or (temp-1) in build_point:
+#                             return False
+#                         if data[temp][y] == data[temp-1][y]:
+#                             build_point.append(temp)
+#                             temp -= 1
+#                         else:
+#                             return False
+#                     build_point.append(temp - 1)
+#                 else:
+#                     return False
+#             x += 1
+#     return True
+#
+#
+# N, L = map(int, input().rstrip().split())
+# data = [list(map(int, input().rstrip().split())) for _ in range(N)]
+# result = 0
+# for i in range(N):
+#     if check(i, 0, ROW):
+#         print('row', i)
+#         result += 1
+#     if check(0, i, COLUM):
+#         print('col',i)
+#         result += 1
+# print(result)
+
+# 12. 경사로 재풀이
+# 완료
+# import sys
+# input = sys.stdin.readline
+#
+# def check(arr):
+#     build = [False] * N
+#     for i in range(N-1):
+#         if arr[i] == arr[i+1]:
+#             continue
+#         elif abs(arr[i] - arr[i + 1]) > 1:
+#             return False
+#         elif arr[i]-arr[i+1] == 1: # 좌측이 더 큰 경우 오른쪽에 배치
+#             for j in range(i+1, i+1+L):
+#                 if 0 <= j < N:
+#                     if arr[i+1] == arr[j] and not build[j]: # 바닥이 평평한지 확인
+#                         build[j] = True
+#                     else:
+#                         return False
+#                 else:
+#                     return False
+#         elif arr[i]-arr[i+1] == -1: # 우측이 더 큰 경우 좌측에 배치
+#             for j in range(i, i-L, -1):
+#                 if 0 <= j < N:
+#                     if arr[i] == arr[j] and not build[j]: # 바닥이 평평한지 확인
+#                         build[j] = True
+#                     else:
+#                         return False
+#                 else:
+#                     return False
+#     return True
+#
+# N, L = map(int, input().rstrip().split())
+# data = [list(map(int, input().rstrip().split())) for _ in range(N)]
+#
+# result = 0
+# for i in range(N):
+#     if check(data[i]): # 행
+#         result += 1
+#
+#     temp = []
+#     for j in range(N):
+#         temp.append(data[j][i])
+#     if check(temp): # 열
+#         result += 1
+#
+# print(result)
+
+
+# 13. 사다리 조작
+# 매우 매우 매우 어려웠다
+# 사다리를 1개 놓은것, 2개놓은것, 3개놓은것 모두 확인
+# 시간복잡독 2700C1*2700 + 2700C2*2700 + 2700C3*2700 이면 불가인데
+# 완전탐색이 안먹히는거같은데..
+# 블로그 참조
+# 아.. 2700이 아니라 270이었어
+# 270 이어도 안될것처럼 보이는데 최적화로 해결해야되나보다
+# 270C3 * 270 (연결확인) 이면 13억
+# 사다리는 true false로 만들자
+
+
+# 콤비네이션을 그대로 쓰면 시간초과
+# 시간초과 나지 않으려면 btk로 최적화해야함
+# 블로그 참조 했음
+
+# def check(depth):
+#     for i in range(N):
+#         now = i
+#         for j in range(H):
+#             if data[j][now]:
+#                 now += 1
+#             elif now > 0 and data[j][now -1]:
+#                 now -= 1
+#         if now != i:
+#             return False
+#     return True
+#
+#
+# def btk(depth, x, y):
+#     global result
+#     if result <= depth:
+#         return
+#     if check(depth):
+#         result = min(result, depth)
+#     if depth == 3:
+#         return
+#
+#     for i in range(x, H):
+#         if i == x: #라인이 그대로면 y축 계속탐색
+#             temp = y
+#         else:
+#             temp = 0# 라인이 바뀌면 0부터 다시 탐색
+#         for j in range(temp, N-1):
+#             if not data[i][j]:
+#                 if j >= N-1 and data[i][j+1]:
+#                     continue
+#                 if j > 0 and data[i][j-1]:
+#                     continue
+#                 data[i][j] = True
+#                 btk(depth + 1, i, j + 2)
+#                 data[i][j] = False
+#
+# # 세로선, 가로선 갯수, 세로선마다 가로선의 갯수
+# N, M, H = map(int, input().split())
+# data = [[False] * N for _ in range(H)]
+#
+# for _ in range(M):
+#     a, b = map(int, input().split())
+#     data[a-1][b-1] = True
+#
+# result = 4
+# btk(0, 0, 0)
+# print(result if result != 4 else -1)
+
+# 14. 드래곤 커브
+# 1. 시작점
+# 2. 시작방향
+# 3. 세대
+# 1. 시작점에서 시작 방향으로 선분1을 긋는다
+# 다음 세대는 오른쪽으로 90도 회전한것을 꼭지점에 붙인 것
+# 이전 꼭지점과 회전 후 꼭지점 위치를 맞추면 드래곤커브를 붙일 수 있다.
+# 결과: 모든 꼭지점이 드래곤 커브인것의 갯수
+# 100, 100 만 유효한 좌표
+# 드래곤커브는 겹칠 수 있다
+# x,y 좌표, 방향, 세대(해당세대까지 진화)
