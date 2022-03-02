@@ -355,3 +355,8 @@ from collections import deque
 # print(visited)
 # print()
 # print(visited2)
+
+a = [[0],[1]]
+b = a*3
+b[0][0] = 1
+print(a)
