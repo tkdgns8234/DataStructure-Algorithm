@@ -361,5 +361,6 @@ from collections import deque
 # b[0][0] = 1
 # print(a)
 
-test = [1,2,3,4,5]
-print(sum(test))
+# test = [1,2,3,4,5]
+# print(sum(test))
+print(int('123'))
