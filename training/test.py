@@ -363,4 +363,12 @@ from collections import deque
 
 # test = [1,2,3,4,5]
 # print(sum(test))
-print(int('123'))
+# test = [1,2,3,4,5]
+# for i in range(len(test)-1, -1, -2):
+#     print(test[i])
+
+import sys
+input = sys.stdin.readline
+
+data = list(input().split())
+print(data)
