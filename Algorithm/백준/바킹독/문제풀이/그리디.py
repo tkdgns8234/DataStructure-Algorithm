@@ -252,7 +252,7 @@
 #
 # n = int(input())
 # data = [list(map(int, input().split())) for _ in range(n)] # rstrip() 을 추가하면 시간 700~800ms 더 소요
-# data.sort(key=lambda x: x[0])  # data.sort() 시, 시간 1000ms 더 소요  2개 정렬 시 On (logn*logn)
+# data.sort(key=lambda x: x[0])  # data.sort() 시, 시간 1000ms 더 소요, 정렬하고자하는 데이터가 크기 때문 2개 정렬 시 O(nlogn+nlogn)
 #
 # result = 0
 # before_start, before_end = data[0][0], data[0][1]

@@ -43,7 +43,7 @@
 #
 # for i in data:
 #     print(binary_search(i, 0, len(tmp)-1), end=" ")
-
+#
 # 문제3 세 수의 합
 # 시간복잡도 최적화 유형의 코드
 # import bisect
