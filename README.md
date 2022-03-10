@@ -76,3 +76,7 @@ value = funName(3)
 14. 2차원 배열에서 최댓값 찾기
 + 간단하게 map 을 사용해서 구할 수 있다
 + 사용형태: max(map(max, list))
+
+15. input() 을 sys.stdin.readline() 으로 대체해서 사용하는 경우
++ input().split() 인 경우 개행문자가 포함되지 않으나 (split이 white space를 기준 쪼개서 출력하기 때문)
++ input() 으로 열을 읽어들이는경우 개행 문자가 포함됨에 유의하자

@@ -189,45 +189,140 @@
 # 7. 합이 0
 # 이진탐색을 활용하는 경우 시간복잡도가 (두원소선택) n^2 * logN (나머지 하나의 원소 탐색) 이므로
 # 파이썬환경에서는 이진탐색을 이용한 풀이가 불가능해보인다
-# 투포인터 활용
+# 투포인터 활용 시간복잡도: O^2
 # 아래는 참고 코드
 # 스스로 풀어보자
-
-
-
-# """
-#  세 팀원 코딩 실력 합 0
-#  팀을 얼마나 많이 만들 수 있는지 계산
-#  결과: 합이 0이 되는 3인조 만들
-#  주의: 같은 값이 연속적으로 나오는 경우 처리
-# """
+# counter 사용하지 않고 반복 시 마다 data.count 를 수행하면 시간초과
 # import sys
 # from collections import Counter
 #
-# n = int(sys.stdin.readline())  # 학생 수
-# arr = list(map(int, sys.stdin.readline().split()))  # 학생 코딩 실력
-# arr.sort()
-# cnt_ = Counter(arr)  # 해당 점수에 해당하는 학생 수 얻기
-# result = 0
-# # 학생을 한명 씩 돌린다.
-# for i, a in enumerate(arr):
-#     left, right = i + 1, n - 1
+# input = sys.stdin.readline
+# n = int(input())
+# data = list(map(int, input().split()))
+# data.sort()
+# cnt_ = Counter(data)
+# ans = 0
+#
+# for i, d in enumerate(data):
+#     left = i + 1
+#     right = n-1
 #     while left < right:
-#         sum_ = arr[left] + arr[right] + arr[i]
-#         # 1. 점수 총합이 0인 경우, 같은 값이 있는 것에 대한 처리 필요
-#         if sum_ == 0:
-#             #  left값과 right 갑이 같은 경우 해당 범위 저장. -4 2 2 2 2
-#             if arr[left] == arr[right]:
-#                 result += right - left
-#             # 다른 경우 right 값에 대한 개수 합 -4 1 1 1 3 3 3
+#         sum = data[i] + data[left] + data[right]
+#         # 0 인경우
+#         if sum == 0:
+#             # left, right 데이터가 같은 경우 중복되는 데이터만큼 +
+#             # ex) -6 3 3 3 3 3 3
+#             if data[left] == data[right]:
+#                 ans += right-left
+#             # 다른경우 right 갯수만큼 +
+#             # ex) -4 1 1 1 3 3 3
 #             else:
-#                 result += cnt_[arr[right]]
+#                 ans += cnt_[data[right]]
 #             left += 1
-#         # 2. 점수 총합이 0 보다 큰 경우
-#         elif sum_ > 0:
+#         # 0보다 작은 경우
+#         elif sum < 0:
+#             left += 1
+#         # 0보다 큰 경우
+#         else:
 #             right -= 1
-#         # 3. 점수 총합이 0 보다 작은 경우
+# print(ans)
+
+# 8. 세 용액
+# 투포인터, 이진탐색 둘 다 가능해보이는데
+# 이진탐색: 특정 수를 기준으로 두고 반복 -> 시간초과
+# 투포인터로 진행
+# 위 문제와 매우 유사해보인다
+# import sys
+# input = sys.stdin.readline
+# n = int(input())
+# data = list(map(int, input().split()))
+# data.sort()
+#
+# ans1, ans2, ans3 = 1e9, 1e9, 1e9
+#
+# for i in range(len(data)):
+#     left, right = i + 1, len(data) - 1
+#     while left < right:
+#         sum_ = data[i] + data[left] + data[right]
+#         if abs(sum_) < abs(ans1 + ans2 + ans3):
+#             ans1, ans2, ans3 = data[i], data[left], data[right]
+#
+#         if sum_ == 0:
+#             break
 #         elif sum_ < 0:
 #             left += 1
+#         elif sum_ > 0:
+#             right -= 1
+# print(ans1, ans2, ans3)
+
+# 9. 공유기 설치
+# 파라메트릭 서치문제, 이코테에서 풀어봤던 문제로 기억한다
+# 원하고자하는 답 (두 공유기 사이의 최대거리) 를 매개변수로 넣고
+# C개 이상 설치할 수 있는지 확인한다
+# import sys
+# input = sys.stdin.readline
+# def binary_search(start, end):
+#     ans = 0
+#     while start <= end:
+#         mid = (start+end)//2
 #
-# print(result)
+#         # mid 로 길이 설정하는 경우 몇개의 공유기 설치할 수 있는지 확인
+#         count = 1
+#         val = data[0]
+#         for i in range(1, N):
+#             if data[i] >= val + mid:
+#                 val = data[i]
+#                 count += 1
+#
+#         # count = 1
+#         # s = 0
+#         # flag = True
+#         # while flag:
+#         #     flag = False
+#         #     for i in range(s + 1, N):
+#         #         if data[i] - data[s] >= mid:
+#         #             count += 1
+#         #             s = i
+#         #             flag = True
+#         #             break
+#
+#         if count < C:
+#             end = mid - 1
+#         else:
+#             start = mid + 1
+#             ans = mid
+#     return ans
+#
+#
+# N, C = map(int, input().split())
+# data = list(int(input().rstrip()) for _ in range(N))
+# data.sort()
+#
+# max_len = data[N-1] - data[0]
+# print(binary_search(0, max_len))
+
+# 합이 0인 네 정수
+# ab, cd 합 모든경우 두개 다 구해서 이진탐색으로 찾는경우 n^2 * logn 인데, 시간 초과 느낌인데
+# 투포인터도 n^3 풀이밖에 안보이네
+# 두 개의 리스트로 나눈 후 dict 이용해 풀어야하는듯
+# 시간복잡도: O(n^2)
+# import sys
+# input = sys.stdin.readline
+# N = int(input())
+# d1, d2, d3, d4 = [], [], [], []
+#
+# for _ in range(N):
+#     data = list(map(int, input().split()))
+#     d1.append(data[0]), d2.append(data[1]), d3.append(data[2]), d4.append(data[3])
+#
+# ab_dict = {}
+# for i in d1:
+#     for j in d2:
+#         ab_dict[i+j] = ab_dict.get(i+j, 0) + 1
+#
+# ans = 0
+# for i in d3:
+#     for j in d4:
+#             ans += ab_dict.get(-(i+j), 0)
+#
+# print(ans)
