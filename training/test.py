@@ -405,8 +405,12 @@ from collections import deque
 #
 # print(result)
 
-dict = {1:1}
-if dict[2]:
-    print(0)
-else:
-    print(1)
+# dict = {1:1}
+# if dict[2]:
+#     print(0)
+# else:
+#     print(1)
+
+# dic = dict()
+# dic['a'] = 'a'
+# print(dic)
