@@ -440,4 +440,5 @@ from collections import deque
 # print(t)
 # s = 'serser'
 # s[3] = 'b'-
-print(1|4)
+ss =[1,222,3]
+print(ss[1:2])
