@@ -442,65 +442,80 @@ from collections import deque
 # s[3] = 'b'-
 # ss =[1,222,3]
 # print(ss[1:2])
+#
+# from collections import deque
+# def bfs(start, space):
+#     # 최단거리의 먹이 위치 찾고 먹으면서 초 세기, 상어 크기 키우기
+#     sx, sy = start
+#     shark_size = 2
+#     eat = 0
+#     move_num = 0
+#
+#     while True:
+#         q = deque()
+#         q.append((sx, sy, 0))
+#         visited = [[False] * n for _ in range(n)]
+#         visited[sx][sy] = True
+#         flag = int(1e9)
+#         fish = []
+#         while q:
+#             x, y, second = q.popleft()
+#             if second > flag:
+#                 break
+#             for move in move_type:
+#                 nx, ny = x + move[0], y + move[1]
+#                 if nx < 0 or ny < 0 or nx >= n or ny >= n:
+#                     continue
+#                 if shark_size < space[nx][ny] or visited[nx][ny]:
+#                     continue
+#
+#                 if shark_size > space[nx][ny] != 0:
+#                     flag = second
+#                     fish.append((nx, ny, second + 1))
+#                 q.append((nx, ny, second + 1))
+#                 visited[nx][ny] = True
+#
+#         if len(fish) > 0:
+#             fish.sort()
+#             x, y, second = fish[0]
+#             print(x, y)
+#             move_num += second
+#             eat += 1
+#             space[x][y] = 0
+#             if eat == shark_size:
+#                 shark_size += 1
+#                 eat = 0
+#             sx, sy = x, y
+#         else:
+#             print(move_num)
+#             break
+#
+# n = int(input())
+#
+# space = []
+# for i in range(n):
+#     space.append(list(map(int, input().split())))
+#
+# for i in range(n):
+#     for j in range(n):
+#         if space[i][j] == 9:
+#             space[i][j] = 0
+#             start = (i, j)
+#
+# move_type = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+# bfs(start, space)
 
-from collections import deque
-def bfs(start, space):
-    # 최단거리의 먹이 위치 찾고 먹으면서 초 세기, 상어 크기 키우기
-    sx, sy = start
-    shark_size = 2
-    eat = 0
-    move_num = 0
-
-    while True:
-        q = deque()
-        q.append((sx, sy, 0))
-        visited = [[False] * n for _ in range(n)]
-        visited[sx][sy] = True
-        flag = int(1e9)
-        fish = []
-        while q:
-            x, y, second = q.popleft()
-            if second > flag:
-                break
-            for move in move_type:
-                nx, ny = x + move[0], y + move[1]
-                if nx < 0 or ny < 0 or nx >= n or ny >= n:
-                    continue
-                if shark_size < space[nx][ny] or visited[nx][ny]:
-                    continue
-
-                if shark_size > space[nx][ny] != 0:
-                    flag = second
-                    fish.append((nx, ny, second + 1))
-                q.append((nx, ny, second + 1))
-                visited[nx][ny] = True
-
-        if len(fish) > 0:
-            fish.sort()
-            x, y, second = fish[0]
-            print(x, y)
-            move_num += second
-            eat += 1
-            space[x][y] = 0
-            if eat == shark_size:
-                shark_size += 1
-                eat = 0
-            sx, sy = x, y
+def Binary_Search_Upper(data_list, x):                  #주어진 list에서 x보다 큰 데이터의 개수를 반환; log n 안에 찾음
+    left = 0
+    right = len(data_list) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if data_list[mid] <= x:
+            left = mid + 1
         else:
-            print(move_num)
-            break
+            right = mid - 1
+    return len(data_list) - (right + 1)
 
-n = int(input())
+v = Binary_Search_Upper([1,2,3,3,3,5], 3)
+print(v)
 
-space = []
-for i in range(n):
-    space.append(list(map(int, input().split())))
-
-for i in range(n):
-    for j in range(n):
-        if space[i][j] == 9:
-            space[i][j] = 0
-            start = (i, j)
-
-move_type = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-bfs(start, space)
