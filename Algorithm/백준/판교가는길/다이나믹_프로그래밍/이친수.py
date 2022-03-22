@@ -1,0 +1,10 @@
+# 직접 모든 경우의 수를 적어나가보니 피보나치와 닮아있다.
+
+N = int(input())
+dp = [0] * (91)
+
+dp[1], dp[2] = 1, 1
+
+for i in range(3, N+1):
+    dp[i] = dp[i-1] + dp[i - 2]
+print(dp[N])
