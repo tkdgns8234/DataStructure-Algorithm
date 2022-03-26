@@ -121,18 +121,18 @@
 #     def __init__(self):
 #         self.tree = [None]
 #         # list -> heap 으로 만들고싶은경우 insert를 리스트갯수만큼 하면 됨
-        
+#
 #     def __len__(self):
 #         return len(self.tree) - 1
-    
+#
 #     def insert(self, val):
 #         self.tree.append(val)
 #         self.heapify_up(len(self))
-#         pass            
-    
+#         pass
+#
 #     def heapify_up(self, i):
 #         parentidx = i//2
-        
+#
 #         while 0 < parentidx:
 #             if self.tree[i] > self.tree[parentidx]:
 #                 #swap
@@ -141,37 +141,37 @@
 #                 parentidx = i//2
 #             else:
 #                 break;
-        
+#
 #     def pop(self):
 #         result = None
-        
+#
 #         if len(self) > 0:
 #             self.tree[len(self)], self.tree[1] = self.tree[1], self.tree[len(self)]
 #             result = self.tree.pop()
 #             self.heapify_down(1)
 #         else:
 #             result = None
-        
+#
 #         return result
-    
+#
 #     def heapify_down(self, i):
 #         left = i * 2
 #         right = i * 2 + 1
 #         max = i
-        
+#
 #         if left <= len(self) and self.tree[max] < self.tree[left]:
 #             max = left
-        
+#
 #         if right <= len(self) and self.tree[max] < self.tree[right]:
 #             max = right
-        
+#
 #         if max != i:
 #             self.tree[i], self.tree[max] = self.tree[max], self.tree[i]
 #             self.heapify_down(max)
-    
+#
 #     def printheap(self):
 #         print(self.tree[1:])
-
+#
 # h = MaxHeap()
 # h.insert(1)
 # h.insert(14)
