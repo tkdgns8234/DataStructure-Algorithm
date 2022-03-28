@@ -102,12 +102,15 @@
 # 2-1 짧은 거리 연결 최소신장트리
 # import sys
 # input = sys.stdin.readline
-
+#
+# # 특정 원소가 속한 집합을 찾기
 # def find_parent(parent, x):
+#     # 루트 노드가 아니라면, 루트 노드를 찾을 때 까지 재귀 호출
 #     if parent[x] != x:
 #         parent[x] = find_parent(parent, parent[x])
 #     return parent[x]
-
+#
+# # 두 원소가 속한 집합을 찾기
 # def union_find(parent, a, b):
 #     a = find_parent(parent, a)
 #     b = find_parent(parent, b)
@@ -115,29 +118,33 @@
 #         parent[a] = b
 #     else:
 #         parent[b] = a
-
+#
+# # 노드, 간선의 갯수 입력받기
 # v, e = map(int, input().split())
-
+#
 # parent = [0] * (v + 1)
-
+#
+# # 부모 테이블상에서, 부모 테이블을 자기 자신으로 초기화
 # for i in range(v + 1):
 #     parent[i] = i
-
+#
 # sum = 0
 # edges = []
-
+#
 # for _ in range(e):
 #     a, b, cost = map(int, input().split())
 #     edges.append((cost, a, b))
-
+#
+# # 간선을 비용 순으로 정렬
 # edges.sort()
-
+#
 # for edge in edges:
-#     cost, a, b = edge 
+#     cost, a, b = edge
+#     # 사이클이 존재하지 않는 경우에만 집합에 포함
 #     if find_parent(parent, a) != find_parent(parent, b):
 #         sum += cost
 #         union_find(parent, a, b)
-
+#
 # print(sum)
 
 
@@ -148,24 +155,24 @@
 # 순서가 정해진 일련의 작업을 차례대로 수행해야할 때 사용
 # 진입 차수가 0 인것을 지속적으로 찾으면서 정렬 하는 방법
 # from collections import deque
-
+#
 # v, e = map(int, input().split())
-
+#
 # indegree = [0] * (v + 1)
 # graph = [[]for i in range(v + 1)]
-
+#
 # for i in range(e):
 #     a, b = map(int, input().split())
 #     graph[a].append(b)
 #     indegree[b] += 1
-
+#
 # def topologysort():
 #     result = []
 #     q = deque()
 #     for i in range(1, v + 1):
 #         if indegree[i] == 0:
 #             q.append(i)
-
+#
 #     while q:
 #         now = q.popleft()
 #         result.append(now)
@@ -173,10 +180,10 @@
 #             indegree[i] -= 1
 #             if indegree[i] == 0:
 #                 q.append(i)
-
+#
 #     for i in result:
 #         print(i, end=" ")
-
+#
 # topologysort()
 
 # 실전문제2 팀 결성
