@@ -256,6 +256,7 @@
 
 
 # 블로그 풀이
+import math
 from sys import stdin
 from itertools import permutations
 from collections import deque
@@ -504,18 +505,30 @@ from collections import deque
 #
 # move_type = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 # bfs(start, space)
+#
+# def Binary_Search_Upper(data_list, x):                  #주어진 list에서 x보다 큰 데이터의 개수를 반환; log n 안에 찾음
+#     left = 0
+#     right = len(data_list) - 1
+#     while left <= right:
+#         mid = (left + right) // 2
+#         if data_list[mid] <= x:
+#             left = mid + 1
+#         else:
+#             right = mid - 1
+#     return len(data_list) - (right + 1)
+#
+# v = Binary_Search_Upper([1,2,3,3,3,5], 3)
+# print(v)
+#
+# from itertools import permutations
+# print(len(list(permutations([1,2,3,4,5,6,7,8], 8))))
+# import math
+# print(math.factorial(8)/math.factorial(math.factorial(8)-math.factorial(8)))
+# print(math.factorial(8))
+# print(math.factorial(0))
 
-def Binary_Search_Upper(data_list, x):                  #주어진 list에서 x보다 큰 데이터의 개수를 반환; log n 안에 찾음
-    left = 0
-    right = len(data_list) - 1
-    while left <= right:
-        mid = (left + right) // 2
-        if data_list[mid] <= x:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return len(data_list) - (right + 1)
+from itertools import permutations
 
-v = Binary_Search_Upper([1,2,3,3,3,5], 3)
-print(v)
-
+_list = [1, 2, 3, 4]
+perm = list(permutations(_list, 1))
+print(len(perm))

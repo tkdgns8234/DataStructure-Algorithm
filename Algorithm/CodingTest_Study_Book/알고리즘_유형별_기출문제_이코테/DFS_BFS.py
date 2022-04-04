@@ -267,6 +267,9 @@
 
 # Q20 감시 피하기
 # 풀긴했는데 조금 아쉽다
+# ?? 매우 잘 풀었는데?
+# 장애물 3개를 설치하는 순열을 백트래킹으로 구하고
+# 레이저를 4방향으로 확인하는것도 간결해
 
 # n = int(input())
 # data = []
@@ -396,7 +399,7 @@
 #     # 연합된 국가 담기
 #     union = [(i, j)]
 #     count = arr[i][j]   # 총 연합된 국가 수
-#         # 1. 인접 국가를 탐색하면서 인구차이 l명 이상, r명 이하인 경우 연합 국가에 담기
+#     # 1. 인접 국가를 탐색하면서 인구차이 l명 이상, r명 이하인 경우 연합 국가에 담기
 #     while dq:
 #         x, y = dq.popleft()
 #         for d in range(4):
@@ -542,3 +545,102 @@
 
 # Q22 블록 이동하기
 # 다시 풀기
+# def solution(board):
+#     answer = 0
+#     return answer
+
+
+# Q18 괄호 변환 다시 풀기
+# 아래 코드로 한번에 성공, 코드 개선해보자
+# def solution(p):
+#     answer = ''
+#     # 1. 빈문자열인 경우
+#     if p == "":
+#         return ""
+#     # 2. 분할
+#     u, v = "", ""
+#     left, right = 0, 0
+#     for i, c in enumerate(p):
+#         if c == '(':
+#             left += 1
+#         else:
+#             right += 1
+#
+#         if left == right:
+#             u = p[0:i+1]
+#             v = p[i+1:]
+#             break
+#     # 3-1 문자열 u가 올바른 과로 문자열이라면 v에대해 1단계부터 다시 수행
+#     flag = True
+#     stack = []
+#     for c in u:
+#         if c == '(':
+#             stack.append(c)
+#         elif c == ")" and len(stack) > 0:
+#             stack.pop()
+#         else:
+#             flag = False
+#     # u가 올바른 문자열이면
+#     if flag:
+#         v = u + solution(v)
+#         return v
+#     # u가 올바른 문자열이 아니면
+#     else:
+#         v = solution(v)
+#         answer += '('
+#         answer += v
+#         answer += ')'
+#         u = u[1:-1]
+#         for c in u:
+#             if c == ')':
+#                 answer += '('
+#             else:
+#                 answer += ')'
+#         return answer
+#
+# ans = solution('()))((()')
+# print(ans)
+#
+# # 개선 버전
+# def devide_str(p):
+#     left, right = 0, 0
+#     for i, c in enumerate(p):
+#         if c == '(':
+#             left += 1
+#         else:
+#             right += 1
+#
+#         if left == right:
+#             u = p[0:i+1]
+#             v = p[i+1:]
+#             return u, v
+#
+# def check(u):
+#     stack = []
+#     for c in u:
+#         if c == '(':
+#             stack.append(c)
+#         elif c == ")" and len(stack) > 0:
+#             stack.pop()
+#         else:
+#             return False
+#     return True
+#
+# def solution(p):
+#     # 1. 빈문자열인 경우
+#     if p == "": return p
+#     # 2. 분할
+#     u, v = devide_str(p)
+#     # 3-1. 문자열 u가 올바른 과로 문자열이라면 v에대해 1단계부터 다시 수행
+#     if check(u):
+#         v = u + solution(v)
+#         return v
+#     # 4. u가 올바른 문자열이 아니면
+#     else:
+#         v = solution(v)
+#         u = u[1:-1]
+#         answer = '(' + v + ')' + "".join(map(lambda x: ')' if x == '(' else '(', u))
+#         return answer
+#
+# ans = solution('()))((()')
+# print(ans)
