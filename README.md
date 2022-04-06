@@ -80,3 +80,17 @@ value = funName(3)
 15. input() 을 sys.stdin.readline() 으로 대체해서 사용하는 경우
 + input().split() 인 경우 개행문자가 포함되지 않으나 (split이 white space를 기준 쪼개서 출력하기 때문)
 + input() 으로 열을 읽어들이는경우 개행 문자가 포함됨에 유의하자
+
+16. Immutable과 Mutable
++ 파이썬에서는 수정이 불가능한 객체(해당 객체의 주솟값을 변경할 수 없는)를 Immutable 하다 라고 한다.
+  + list, tuple, string, 사용자 정의 클래스 등
++ 수정이 가능한 객체
+  + int, float, bool 등 기본자료형
+
+17. 파이썬의 * (asterisk)란?
++ *
+  + *를 단독으로 사용하는 경우 -> 언패킹(unpacking)
+  + 함수의 파라미터로 사용되는 *args 는 args로 들어오는 리스트나 튜플같은 immutable 객체를 언패킹하는것과 동일함
+    + tuple 형태로 데이터가 들어옴
++ **
+  + 함수의 파라미터로 사용되는 **kewards 는 사전자료형을 사용할때 사용

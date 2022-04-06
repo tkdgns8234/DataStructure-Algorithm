@@ -45,7 +45,6 @@
 # 모든 자릿수에대해 동일한 연산을 수행
 # 자릿수 D 원소의 갯수 N 일 때 시간복잡도 O(DN)
 
-
 # 4. 계수 정렬
 # 특정 상황에서만 사용할 수 있지만 매우 빠른 정렬알고리즘
 # 일반적으로 100만 이하의 수 정렬에사용가능
@@ -71,14 +70,14 @@
 
 # 2. 선택정렬
 # array = [2,4,5,1,8,3,9]
-
+#
 # for i in range(len(array)):
 #     min_index = i
 #     for j in range(i, len(array)-1):
 #         if array[min_index] > array[j+1]:
 #             min_index = j+1
 #     array[i],array[min_index] = array[min_index],array[i]
-
+#
 # print(array)
 
 # 3.삽입정렬
