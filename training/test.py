@@ -527,8 +527,36 @@ from collections import deque
 # print(math.factorial(8))
 # print(math.factorial(0))
 
-from itertools import permutations
+# from itertools import permutations
+#
+# _list = [1, 2, 3, 4]
+# perm = list(permutations(_list, 1))
+# print(len(perm))
 
-_list = [1, 2, 3, 4]
-perm = list(permutations(_list, 1))
-print(len(perm))
+# import bisect
+# test = [1,2,3,4]
+# print(bisect.bisect_left(test, 2))
+# print(bisect.bisect_right(test, 2))
+
+test = ['frodod', 'froddde', 'froddd']
+test.sort()
+print(test)
+n = int(input())
+t = []
+p = []
+dp = [0] * (n + 1)
+
+for i in range(n):
+    a, b = map(int, input().split())
+    t.append(a)
+    p.append(b)
+
+max_val = 0
+for i in range(n-1, -1, -1):
+    time = i + t[i]
+    if time <= n:
+        dp[i] = max(p[i] + dp[time], max_val)
+        max_val = dp[i]
+    else:
+        dp[i] = max_val
+print(max_val)

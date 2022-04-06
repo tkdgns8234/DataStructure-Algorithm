@@ -5,7 +5,7 @@ arr = list(map(int, input().split()))
 cnt = 0
 def dfs(depth, sum):
     if depth == n:
-        return 0
+        return
     # 맨 처음이 0인경우는 없음 숫자를 일단 하나를 넣어야지..
     # 그래서 더한 경우 m 과 같은지 확인한다
     if sum + arr[depth] == m:

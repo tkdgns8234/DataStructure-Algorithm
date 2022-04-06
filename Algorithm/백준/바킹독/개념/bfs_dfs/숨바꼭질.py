@@ -1,4 +1,5 @@
 # 문제4 숨바꼭질
+# 1차원 bfs
 from collections import deque
 
 n, m = map(int, input().split())

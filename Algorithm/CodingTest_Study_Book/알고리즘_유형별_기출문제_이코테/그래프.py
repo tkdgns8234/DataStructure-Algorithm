@@ -106,5 +106,3 @@
 #     dist = min(x-nx, y-ny, z-nz)
 #
 #     edges.append((dist, ))
-
-# Q45 최종 순위
