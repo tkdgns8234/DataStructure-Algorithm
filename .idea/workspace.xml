@@ -5,29 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69baef3f-93d5-44cd-90fd-67a2804061d1" name="변경" comment="변경">
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M11.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M12.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M7.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M8.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M9.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/계란으로_계란치기.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/로또.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/소문난_칠공주.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/테트로미노.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/10_퇴사_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/11_쉬운_계단_수.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/12_LCS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/13_제곱수의_합.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/1_피보나치_함수.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/2_정수_삼각형.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/3_2xn_타일링_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/4_이친수.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/5_연속합.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/6_가장_큰_증가하는_부분_수열.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/7_가장_긴_증가하는_부분_수열.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/8_파도반_수열.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/9_퇴사.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/10_연구소.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/11_연산자_끼워넣기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/12_스타트와_링크.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/13_경사로.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/14_사다리_조작.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/15_드래곤_커브.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/1_Puyo_Puyo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/2_톱니바퀴.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/3_주사위_굴리기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/4_트럭.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/5_Maaaaaaaaze.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/6_로봇_청소기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/7_뱀.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/8_테트로미노.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/9_구슬_탈출2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/백준/바킹독/개념/구현/그룹_단어_체커.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/백준/구현/그룹_단어_체커.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/백준/바킹독/개념/구현/셀프_넘버.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/백준/구현/셀프_넘버.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/백준/바킹독/개념/구현/아기_상어.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/백준/구현/아기_상어.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/백준/바킹독/개념/구현/주사위_굴리기.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/백준/구현/주사위_굴리기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/백준/바킹독/개념/구현/테트로미노.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/백준/구현/테트로미노.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/백준/바킹독/개념/구현/프린터_큐.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/백준/구현/프린터_큐.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/training/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/training/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,8 +83,8 @@
       <recent name="$PROJECT_DIR$/Algorithm/백준/바킹독" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.소문난_칠공주">
-    <configuration name="로또" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.11_쉬운_계단_수">
+    <configuration name="11_쉬운_계단_수" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -84,11 +92,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/로또.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/11_쉬운_계단_수.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -97,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="N과M11" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="1_피보나치_함수" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,11 +113,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M11.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/1_피보나치_함수.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="N과M12" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="5_연속합" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,11 +134,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/N과M12.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/5_연속합.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="6_가장_큰_증가하는_부분_수열" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="study_for_coding_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/6_가장_큰_증가하는_부분_수열.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="9_퇴사" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="study_for_coding_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/9_퇴사.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -560,27 +610,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="소문난_칠공주" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="study_for_coding_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/백트래킹/소문난_칠공주.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -602,42 +631,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="study_for_coding_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/training" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/training/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.N과M11" />
-      <item itemvalue="Python.N과M12" />
-      <item itemvalue="Python.로또" />
-      <item itemvalue="Python.소문난_칠공주" />
-      <item itemvalue="Python.test" />
+      <item itemvalue="Python.1_피보나치_함수" />
+      <item itemvalue="Python.5_연속합" />
+      <item itemvalue="Python.6_가장_큰_증가하는_부분_수열" />
+      <item itemvalue="Python.9_퇴사" />
+      <item itemvalue="Python.11_쉬운_계단_수" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.소문난_칠공주" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.로또" />
-        <item itemvalue="Python.N과M12" />
-        <item itemvalue="Python.N과M11" />
+        <item itemvalue="Python.11_쉬운_계단_수" />
+        <item itemvalue="Python.9_퇴사" />
+        <item itemvalue="Python.6_가장_큰_증가하는_부분_수열" />
+        <item itemvalue="Python.5_연속합" />
+        <item itemvalue="Python.1_피보나치_함수" />
       </list>
     </recent_temporary>
   </component>
@@ -710,76 +718,6 @@
           <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/재귀.py</url>
           <line>278</line>
           <option name="timeStamp" value="192" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>66</line>
-          <option name="timeStamp" value="197" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>72</line>
-          <option name="timeStamp" value="198" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="199" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>139</line>
-          <option name="timeStamp" value="202" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>161</line>
-          <option name="timeStamp" value="203" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>198</line>
-          <option name="timeStamp" value="204" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>297</line>
-          <option name="timeStamp" value="218" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>478</line>
-          <option name="timeStamp" value="227" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>465</line>
-          <option name="timeStamp" value="229" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>631</line>
-          <option name="timeStamp" value="231" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py</url>
-          <line>653</line>
-          <option name="timeStamp" value="232" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="233" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp.py</url>
-          <line>85</line>
-          <option name="timeStamp" value="237" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp.py</url>
-          <line>194</line>
-          <option name="timeStamp" value="238" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/그리디.py</url>
@@ -861,6 +799,26 @@
           <line>12</line>
           <option name="timeStamp" value="292" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/5_Maaaaaaaaze.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="293" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션/5_Maaaaaaaaze.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="294" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/11_쉬운_계단_수.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="303" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/dp/11_쉬운_계단_수.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="304" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -873,6 +831,8 @@
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="arr" language="Python" />
+        <watch expression="temp" language="Python" />
+        <watch expression="lines" language="Python" />
       </configuration>
     </watches-manager>
   </component>

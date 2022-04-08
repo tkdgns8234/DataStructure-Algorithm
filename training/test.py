@@ -572,8 +572,10 @@ from collections import deque
 # 
 # v = Binary_Search_Upper([1,2,3,3,3,5], 3)
 # print(v)
+#
+# from collections import deque
+# q = deque([(1,2,3,4)])
+# now = q.popleft()
+# print(now)
 
-from collections import deque
-q = deque([(1,2,3,4)])
-now = q.popleft()
-print(now)
+print(-1%4)
