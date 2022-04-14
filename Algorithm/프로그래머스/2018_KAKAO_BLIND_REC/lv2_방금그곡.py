@@ -1,3 +1,6 @@
+# 라디오에서 들은 멜로디와 동일한 멜로디를 가진 노래 출력하는 문제
+# 노래가 반복재생될 수 있는게 포인트
+
 def get_time(t):
     hour, minute = t.split(':')
     return int(hour)*60 + int(minute)

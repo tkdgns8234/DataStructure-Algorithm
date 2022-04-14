@@ -82,15 +82,23 @@ value = funName(3)
 + input() 으로 열을 읽어들이는경우 개행 문자가 포함됨에 유의하자
 
 16. Immutable과 Mutable
-+ 파이썬에서는 수정이 불가능한 객체(해당 객체의 주솟값을 변경할 수 없는)를 Immutable 하다 라고 한다.
-  + list, tuple, string, 사용자 정의 클래스 등
++ 파이썬에서는 변경 불가능한 객체(해당 객체의 주솟값을 변경할 수 없는)를 Immutable 하다 라고 한다.
+  + int, float, string, bool 등 기본자료형, tuple
+  + call by value 처럼 동작
+  + 새로운 값을 대입하면 객체가 새로 생성됨
 + 수정이 가능한 객체
-  + int, float, bool 등 기본자료형
+  + list, dict, 사용자 정의 클래스 등
+  + call by reference 처럼 동작
+  
 
 17. 파이썬의 * (asterisk)란?
-+ *
-  + *를 단독으로 사용하는 경우 -> 언패킹(unpacking)
-  + 함수의 파라미터로 사용되는 *args 는 args로 들어오는 리스트나 튜플같은 immutable 객체를 언패킹하는것과 동일함
-    + tuple 형태로 데이터가 들어옴
++ *를 단독으로 사용하는 경우 -> 언패킹(unpacking)
+  + 함수의 파라미터로 사용되는 *args 는 args로 들어오는 리스트나 튜플같은 객체를 언패킹하는것과 동일함
+  + tuple 형태로 데이터가 들어옴
 + **
   + 함수의 파라미터로 사용되는 **kewards 는 사전자료형을 사용할때 사용
+
+18. Counter
++ 파이썬 collections의 Counter 클래스
++ c = Counter([]) 형태로 사용
++ 키:값 형태의 딕셔너리 생성하는 함수

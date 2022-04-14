@@ -1,3 +1,4 @@
+# 시뮬레이션 문제, 문제 그대로 작성했음
 def solution(msg):
     answer = []
     msg = list(msg)

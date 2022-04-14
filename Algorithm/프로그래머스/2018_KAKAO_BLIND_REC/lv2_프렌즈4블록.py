@@ -1,3 +1,6 @@
+# 모든 위치를 기준으로 터질 수 있는 정사각형 탐색
+# 터친 후 move
+
 import collections
 
 
