@@ -3,7 +3,64 @@
 # distance 는 -1 로 초기화하는게 더 안전해보이네
 # from collections import deque
 # # 도시갯수, 도로의 갯수, 거리정보, 출발도시의 번호
-# n, m, k, start = map(int, input().split())
+# n, m, k, start = import collections
+#
+# move_type = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+#
+# def point_validator(n1, n2):
+#     n1_x, n1_y, n2_x, n2_y = n1[0], n1[1], n2[0], n2[1]
+#     if 0 <= n1_x < N and 0 <= n1_y < N:
+#         if 0 <= n2_x < N and 0 <= n2_y < N:
+#             if visited[n1_x][n1_y][n2_x][n2_y] == False and\
+#                     Board[n1_x][n1_y]== 0 and Board[n2_x][n2_y] == 0:
+#                 return True
+#     return False
+#
+# def rotate(now):
+#     available = []
+#     n1_x, n1_y, n2_x, n2_y = now[0][0], now[0][1], now[1][0], now[1][1]
+#     # 가로 상태
+#     if n1_x == n2_x:
+#         for i in (1, -1): #1: 아래 -1: 위
+#             if point_validator((n1_x+i, n1_y), (n2_x+i, n2_y)):
+#                 available.append(([n1_x, n1_y], [n1_x+i, n1_y]))
+#                 available.append(([n2_x, n2_y], [n2_x+i, n2_y]))
+#     # 세로 상태
+#     elif n1_y == n2_y:
+#         for i in (1, -1): #-1 왼쪽 1 오른쪽
+#             if point_validator((n1_x,n1_y+i), (n2_x, n2_y+i)):
+#                 available.append(([n1_x, n1_y], [n1_x, n1_y+i]))
+#                 available.append(([n2_x, n2_y], [n2_x, n2_y+i]))
+#
+#     return available
+#
+# Board, visited = [], []
+# N = 0
+# def solution(board):
+#     global N, visited, Board
+#     Board = board
+#     N = len(board)
+#
+#     visited = [[[[False] * N for _ in range(N)] for _ in range(N)] for _ in range(N)]
+#     start = ([0,0], [0,1], 0) # 0 -> dist
+#     q = collections.deque([start])
+#     while q:
+#         now = q.popleft()
+#         if (now[0][0] == N-1 and now[0][1] == N-1) or (now[1][0] == N-1 and now[1][1] == N-1):
+#             return now[2]
+#
+#         for move in move_type:
+#             n1 = [now[0][0] + move[0], now[0][1] + move[1]]
+#             n2 = [now[1][0] + move[0], now[1][1] + move[1]]
+#             if point_validator(n1, n2):
+#                 visited[n1[0]][n1[1]][n2[0]][n2[1]] = True
+#                 dist = now[2] + 1
+#                 q.append((n1, n2, dist))
+#         # 회전
+#         for n1, n2 in rotate(now):
+#             visited[n1[0]][n1[1]][n2[0]][n2[1]] = True
+#             dist = now[2] + 1
+#             q.append((n1, n2, dist))map(int, input().split())
 #
 # graph = [[] for i in range(n + 1)]
 # distance = [0] * (n + 1)
