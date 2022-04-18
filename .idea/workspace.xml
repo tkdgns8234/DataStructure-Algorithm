@@ -5,25 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69baef3f-93d5-44cd-90fd-67a2804061d1" name="변경" comment="변경">
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/lv1_크레인_인형뽑기_게임.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/lv3_불량사용자.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/lv3_징검다리건너기.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/lv4_호텔방배정.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2020_카카오_인턴십/lv1_키패드누르기.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2020_카카오_인턴십/lv2_수식최대화.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2021_KAKAO_BLIND_REC/lv1_신규_아이디_추천.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2021_KAKAO_BLIND_REC/lv2_메뉴_리뉴얼.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2021_KAKAO_BLIND_REC/lv2_순위검색.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2021_KAKAO_BLIND_REC/lv3_광고삽입.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2021_KAKAO_BLIND_REC/lv3_카드_짝_맞추기.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2021_KAKAO_BLIND_REC/lv3_합승택시요금.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2021_KAKAO_BLIND_REC/lv4_매출하락최소화.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/기능개발.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/가장_큰_수.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/거리두기_확인하기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/타겟_넘버.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/프린터.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/크레인_인형뽑기_게임.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/lv2_튜플.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/프로그래머스/2020_KAKAO_BLIND_REC/lv4_가사검색.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/2020_KAKAO_BLIND_REC/lv4_가사검색.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/training/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/기능개발.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/기능개발.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +61,49 @@
       <recent name="$PROJECT_DIR$/Algorithm/백준/바킹독" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.lv4_호텔방배정">
+  <component name="RunManager" selected="Python.프린터">
+    <configuration name="기능개발" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="study_for_coding_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/level_2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/기능개발.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="프린터" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="study_for_coding_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/level_2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/프린터.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="그리디" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -349,7 +378,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lv1_크레인_인형뽑기_게임" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="타겟_넘버" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -357,11 +386,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/level_2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/lv1_크레인_인형뽑기_게임.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/타겟_넘버.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -370,7 +399,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lv2_튜플" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="거리두기_확인하기" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -378,53 +407,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/level_2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/lv2_튜플.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lv3_징검다리건너기" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="study_for_coding_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/lv3_징검다리건너기.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lv3_불량사용자" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="study_for_coding_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/lv3_불량사용자.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/level_2/거리두기_확인하기.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -561,19 +548,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.lv2_튜플" />
-      <item itemvalue="Python.lv1_크레인_인형뽑기_게임" />
-      <item itemvalue="Python.lv3_불량사용자" />
-      <item itemvalue="Python.lv3_징검다리건너기" />
       <item itemvalue="Python.lv4_호텔방배정" />
+      <item itemvalue="Python.기능개발" />
+      <item itemvalue="Python.타겟_넘버" />
+      <item itemvalue="Python.거리두기_확인하기" />
+      <item itemvalue="Python.프린터" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.프린터" />
+        <item itemvalue="Python.거리두기_확인하기" />
+        <item itemvalue="Python.타겟_넘버" />
+        <item itemvalue="Python.기능개발" />
         <item itemvalue="Python.lv4_호텔방배정" />
-        <item itemvalue="Python.lv3_징검다리건너기" />
-        <item itemvalue="Python.lv3_불량사용자" />
-        <item itemvalue="Python.lv2_튜플" />
-        <item itemvalue="Python.lv1_크레인_인형뽑기_게임" />
       </list>
     </recent_temporary>
   </component>
@@ -886,6 +873,46 @@
           <url>file://$PROJECT_DIR$/Algorithm/프로그래머스/2019_카카오_개발자_겨울_인턴십/lv4_호텔방배정.py</url>
           <line>92</line>
           <option name="timeStamp" value="454" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/프로그래머스/level_2/기능개발.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="455" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/프로그래머스/level_2/기능개발.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="456" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/프로그래머스/level_2/기능개발.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="457" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/프로그래머스/level_2/타겟_넘버.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="458" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/프로그래머스/level_2/타겟_넘버.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="459" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/프로그래머스/level_2/거리두기_확인하기.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="461" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/프로그래머스/level_2/프린터.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="462" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/프로그래머스/level_2/프린터.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="463" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
