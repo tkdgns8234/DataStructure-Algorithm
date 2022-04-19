@@ -619,3 +619,4 @@ from collections import deque
 #
 # a = solution(12, [1,3,6,10], [1,1,1])
 # print(a)
+
