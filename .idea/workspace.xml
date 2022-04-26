@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69baef3f-93d5-44cd-90fd-67a2804061d1" name="변경" comment="변경">
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/그래프/lv3_가장먼노드.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/그래프/lv3_순위.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/그래프/lv5_방의개수.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/순열-연습/단어수학.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/순열-연습/부등호.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/순열-연습/스타트와_링크.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/순열-연습/연산자_끼워넣기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/재귀-연습/부분수열의_합.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/재귀-연습/부분수열의_합_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/재귀-연습/연산자_끼워넣기_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스_순열/연습/부등호.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/재귀-연습/로또.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,14 +60,56 @@
       <recent name="$PROJECT_DIR$/Algorithm/프로그래머스/2018_KAKAO_BLIND_REC" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/순열-연습" />
       <recent name="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/그리디" />
       <recent name="$PROJECT_DIR$/Algorithm/Custom_Lib" />
       <recent name="$PROJECT_DIR$/Algorithm/백준" />
       <recent name="$PROJECT_DIR$/Algorithm/프로그래머스/level_1" />
-      <recent name="$PROJECT_DIR$/Algorithm/백준/바킹독/개념" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.lv5_방의개수">
+  <component name="RunManager" selected="Python.연산자_끼워넣기_2">
+    <configuration name="단어수학" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="study_for_coding_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스_순열/연습" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/순열-연습/단어수학.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="그래프" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="study_for_coding_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/CodingTest_Study_Book/알고리즘_유형별_기출문제_이코테" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/CodingTest_Study_Book/알고리즘_유형별_기출문제_이코테/그래프.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="시뮬레이션" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,11 +118,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/시뮬레이션" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/바킹독/문제풀이/시뮬레이션.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/시뮬레이션/시뮬레이션.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -253,6 +300,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="부등호" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="study_for_coding_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스_순열/연습" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스_순열/연습/부등호.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="다이나믹프로그래밍" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -400,7 +468,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="그래프" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="연산자_끼워넣기" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -408,11 +476,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/CodingTest_Study_Book/알고리즘_유형별_기출문제_이코테" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/순열-연습" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/CodingTest_Study_Book/알고리즘_유형별_기출문제_이코테/그래프.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/순열-연습/연산자_끼워넣기.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -421,7 +489,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="시뮬레이션" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="부분수열의_합_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -429,11 +497,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/시뮬레이션" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/재귀-연습" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/시뮬레이션/시뮬레이션.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/재귀-연습/부분수열의_합_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -442,7 +510,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lv2_기능개발" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="연산자_끼워넣기_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -450,11 +518,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/스택_큐" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/재귀-연습" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/스택_큐/lv2_기능개발.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/재귀-연습/연산자_끼워넣기_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -463,7 +531,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lv2_프린터" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lv3_정수삼각형" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -471,11 +539,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/스택_큐" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/동적계획법" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/스택_큐/lv2_프린터.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/동적계획법/lv3_정수삼각형.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -484,7 +552,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lv3_단어변환" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lv3_등굣길" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -492,11 +560,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/dfs_bfs" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/동적계획법" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/dfs_bfs/lv3_단어변환.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/동적계획법/lv3_등굣길.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -652,69 +720,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lv3_정수삼각형" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="study_for_coding_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/동적계획법" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/동적계획법/lv3_정수삼각형.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lv3_등굣길" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="study_for_coding_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/동적계획법" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/동적계획법/lv3_등굣길.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lv4_도둑질" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="study_for_coding_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/동적계획법" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/동적계획법/lv4_도둑질.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="lv4_징검다리" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -780,17 +785,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.lv2_기능개발" />
-      <item itemvalue="Python.시뮬레이션" />
-      <item itemvalue="Python.lv4_도둑질" />
-      <item itemvalue="Python.lv3_단어변환" />
       <item itemvalue="Python.lv5_방의개수" />
+      <item itemvalue="Python.단어수학" />
+      <item itemvalue="Python.부분수열의_합_2" />
+      <item itemvalue="Python.연산자_끼워넣기" />
+      <item itemvalue="Python.연산자_끼워넣기_2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.연산자_끼워넣기_2" />
+        <item itemvalue="Python.연산자_끼워넣기" />
+        <item itemvalue="Python.부분수열의_합_2" />
+        <item itemvalue="Python.단어수학" />
         <item itemvalue="Python.lv5_방의개수" />
-        <item itemvalue="Python.lv3_단어변환" />
-        <item itemvalue="Python.lv4_도둑질" />
       </list>
     </recent_temporary>
   </component>
@@ -1268,6 +1275,11 @@
           <url>file://$PROJECT_DIR$/Algorithm/프로그래머스/고득점_kit/그래프/lv5_방의개수.py</url>
           <line>22</line>
           <option name="timeStamp" value="528" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/브루트포스/재귀-연습/로또.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="529" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
