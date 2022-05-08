@@ -12,7 +12,7 @@
 3. product 의 경우 각각의 list 원소의 갯수만큼 곱해준다
    1. data = ['사과', '배', '귤']
       result = list(product(data, repeat=2))
-      의 경우 3*3
+      의 경우 3**2
 
 파이썬 문법 정리
 ----------
