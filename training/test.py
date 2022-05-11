@@ -254,6 +254,7 @@
 
 
 # 블로그 풀이
+import heapq
 import math
 from sys import stdin
 from itertools import permutations
@@ -620,3 +621,7 @@ from collections import deque
 # a = solution(12, [1,3,6,10], [1,1,1])
 # print(a)
 
+test = [1,4,3,2,52,6,4,7467,5,8,678]
+while test:
+    v = heapq.heappop(test)
+    print(v)
