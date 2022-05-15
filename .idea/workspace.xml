@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69baef3f-93d5-44cd-90fd-67a2804061d1" name="변경" comment="변경">
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습/트리의_순회.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습/하노이_탑_이동_순서.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습/Z.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습/별_찍기_10.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습/종이의_개수.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습/종이의_개수.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +61,28 @@
       <recent name="$PROJECT_DIR$/Algorithm/프로그래머스/level_1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.트리의_순회">
+  <component name="RunManager" selected="Python.별_찍기_10">
+    <configuration name="Z" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="study_for_coding_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습/Z.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="재귀" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -400,27 +420,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="배열_합치기" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="study_for_coding_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습/배열_합치기.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="종이의_개수" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -631,7 +630,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="숫자_카드_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="별_찍기_10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="study_for_coding_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -643,7 +642,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습/숫자_카드_2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/백준/백준강의/알고리즘_중급_1/분할_정복/연습/별_찍기_10.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -696,19 +695,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.숫자_카드_2" />
-      <item itemvalue="Python.배열_합치기" />
       <item itemvalue="Python.종이의_개수" />
       <item itemvalue="Python.하노이_탑_이동_순서" />
       <item itemvalue="Python.트리의_순회" />
+      <item itemvalue="Python.Z" />
+      <item itemvalue="Python.별_찍기_10" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.별_찍기_10" />
+        <item itemvalue="Python.Z" />
         <item itemvalue="Python.트리의_순회" />
         <item itemvalue="Python.하노이_탑_이동_순서" />
         <item itemvalue="Python.종이의_개수" />
-        <item itemvalue="Python.배열_합치기" />
-        <item itemvalue="Python.숫자_카드_2" />
       </list>
     </recent_temporary>
   </component>
