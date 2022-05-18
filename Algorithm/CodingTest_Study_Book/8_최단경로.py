@@ -86,7 +86,7 @@
 # import sys
 # input = sys.stdin.readline
 # INF = int(1e9) # 최댓 값 지정
-
+#
 # # n: 노드 수, m: 간선 수 입력
 # n, m = map(int, input().split())
 # # 시작 노드 입력
@@ -95,12 +95,12 @@
 # distance = [INF] * (n+1)
 # # 각 노드별 정보 입력을 위한 list
 # graph = [[] for i in range(n+1)]
-
+#
 # # 노드 별 정보 입력
 # for i in range(m):
 #     a,b,c = map(int, input().split())
 #     graph[a].append((b,c))
-
+#
 # #다익스트라 알고리즘
 # def dijkstra(start):
 #     q = []
@@ -114,13 +114,13 @@
 #         # 이미 방문한 노드는 생략
 #         if distance[now] < dis:
 #             continue
-        
+#
 #         for i in graph[now]:
 #             cost = dis + i[1]
 #             if distance[i[0]] > cost:
 #                 distance[i[0]] = cost
 #                 heapq.heappush(q, (cost, i[0]))
-
+#
 # dijkstra(start)
 # for i in range(1, n+1):
 #     if distance[i] == INF:
@@ -183,29 +183,29 @@
 # import sys
 # input = sys.stdin.readline
 # INF = int(1e9)
-
+#
 # # 노드 및 간선 갯수를 입력 받기
 # n = int(input())
 # m = int(input())
-
+#
 # # graph 무한으로 초기화
 # graph = [[INF for i in range(n + 1)] for i in range(n + 1)]
-
+#
 # for i in range(m):
 #     a,b,c = map(int, input().split())
 #     graph[a][b] = c
-
+#
 # # 대각선 0 으로 만들기
 # for i in range(1, n+1):
 #     for j in range(1, n+1):
 #         if i == j:
 #             graph[i][j] = 0
-
+#
 # for k in range(1, n+1):
 #     for i in range(1, n+1):
 #         for j in range(1, n+1):
 #             graph[i][j] = min(graph[i][j], graph[i][k] + graph[k][j])
-
+#
 # for i in range(1, n + 1):
 #     for j in range(1, n+1):
 #         if graph[i][j] != INF:
