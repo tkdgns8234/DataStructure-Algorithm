@@ -621,7 +621,36 @@ from collections import deque
 # a = solution(12, [1,3,6,10], [1,1,1])
 # print(a)
 
-test = [1,4,3,2,52,6,4,7467,5,8,678]
-while test:
-    v = heapq.heappop(test)
-    print(v)
+# test = [1,4,3,2,52,6,4,7467,5,8,678]
+# while test:
+#     v = heapq.heappop(test)
+#     print(v)
+
+
+
+# 시간효율은 떨어지지만 내가 짜려는 방식의 코드
+import sys, heapq
+n = int(sys.stdin.readline())
+table = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
+dx = [1,-1,0,0]
+dy = [0,0,1,-1]
+check = [[[False] * 201 for _ in range(n)]for _ in range(n)]
+def bfs():
+    q = []
+    heapq.heappush(q, (0, table[0][0], table[0][0], 0, 0))
+    while q:
+        diff, temp_max, temp_min, x, y = heapq.heappop(q)
+        if x == n - 1 and y == n - 1:
+            return diff
+        if check[x][y][temp_min]:
+            continue
+        check[x][y][temp_min] = True
+        for i in range(4):
+            nx, ny = x + dx[i], y + dy[i]
+            if 0 <= nx < n and 0 <= ny < n:
+                new_max = max(temp_max, table[nx][ny])
+                new_min = min(temp_min, table[nx][ny])
+                if check[nx][ny][new_min] == False:
+                    heapq.heappush(q, (new_max - new_min, new_max, new_min, nx, ny))
+
+print(bfs())
