@@ -1,4 +1,4 @@
-# 문제7 부분 수열의 합
+# # 문제7 부분 수열의 합
 n, m = map(int, input().split())
 arr = list(map(int, input().split()))
 

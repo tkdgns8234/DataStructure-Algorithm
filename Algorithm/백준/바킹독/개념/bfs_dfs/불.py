@@ -22,7 +22,7 @@ def bfs():
                 return dist_jh[x][y] + 1
             if data[nx][ny] == '#' or dist_jh[nx][ny] > 0:
                 continue
-            if dist_fire[nx][ny] == 0 or dist_fire[nx][ny] > dist_jh[x][y] + 1:
+            if dist_fire[nx][ny] == 0 or dist_fire[nx][ny] > dist_jh[x][y]+1:
                 jh_q.append((nx,ny))
                 dist_jh[nx][ny] = dist_jh[x][y] + 1
     return 'IMPOSSIBLE'
@@ -31,7 +31,7 @@ move_type = [(-1, 0),(1, 0),(0, 1),(0, -1)]
 
 n, m = map(int, input().split())
 jh_q, fire_q = deque(), deque()
-dist_jh, dist_fire = [[0]*m for i in range(m)], [[0]*m for i in range(m)]
+dist_jh, dist_fire = [[0]*m for i in range(n)], [[0]*m for i in range(n)]
 data = []
 for i in range(n):
     temp = list(input().rstrip())

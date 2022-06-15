@@ -628,29 +628,73 @@ from collections import deque
 
 
 
-# 시간효율은 떨어지지만 내가 짜려는 방식의 코드
-import sys, heapq
-n = int(sys.stdin.readline())
-table = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
-dx = [1,-1,0,0]
-dy = [0,0,1,-1]
-check = [[[False] * 201 for _ in range(n)]for _ in range(n)]
-def bfs():
-    q = []
-    heapq.heappush(q, (0, table[0][0], table[0][0], 0, 0))
-    while q:
-        diff, temp_max, temp_min, x, y = heapq.heappop(q)
-        if x == n - 1 and y == n - 1:
-            return diff
-        if check[x][y][temp_min]:
-            continue
-        check[x][y][temp_min] = True
-        for i in range(4):
-            nx, ny = x + dx[i], y + dy[i]
-            if 0 <= nx < n and 0 <= ny < n:
-                new_max = max(temp_max, table[nx][ny])
-                new_min = min(temp_min, table[nx][ny])
-                if check[nx][ny][new_min] == False:
-                    heapq.heappush(q, (new_max - new_min, new_max, new_min, nx, ny))
+# # 시간효율은 떨어지지만 내가 짜려는 방식의 코드
+# import sys, heapq
+# n = int(sys.stdin.readline())
+# table = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
+# dx = [1,-1,0,0]
+# dy = [0,0,1,-1]
+# check = [[[False] * 201 for _ in range(n)]for _ in range(n)]
+# def bfs():
+#     q = []
+#     heapq.heappush(q, (0, table[0][0], table[0][0], 0, 0))
+#     while q:
+#         diff, temp_max, temp_min, x, y = heapq.heappop(q)
+#         if x == n - 1 and y == n - 1:
+#             return diff
+#         if check[x][y][temp_min]:
+#             continue
+#         check[x][y][temp_min] = True
+#         for i in range(4):
+#             nx, ny = x + dx[i], y + dy[i]
+#             if 0 <= nx < n and 0 <= ny < n:
+#                 new_max = max(temp_max, table[nx][ny])
+#                 new_min = min(temp_min, table[nx][ny])
+#                 if check[nx][ny][new_min] == False:
+#                     heapq.heappush(q, (new_max - new_min, new_max, new_min, nx, ny))
+#
+# print(bfs())
 
-print(bfs())
+from itertools import permutations
+
+def oper(a, b, op):
+    a, b = map(int, [a, b])
+    if op == '-':
+        return a-b
+    elif op == '*':
+        return a*b
+    elif op == '+':
+        return a+b
+
+def solve(op, exp):
+    # 표현식 쪼개기
+    arr = []
+    temp = ''
+    for e in exp:
+        if str(e).isnumeric():
+            temp += e
+        else:
+            arr.append(int(temp))
+            arr.append(e)
+            temp = ''
+    arr.append(int(temp))
+
+    for o in op:
+        stack = []
+        while arr:
+            v = arr.pop(0)
+            if v == o:
+                stack.append(oper(stack.pop(), arr.pop(0), o))
+            else:
+                stack.append(v)
+        arr = stack
+    return int(arr[0])
+
+
+def solution(expression):
+    answer = 0
+    for op in permutations(['+','*','-'], 3):
+        answer = max(answer, abs(solve(op, expression)))
+    return answer
+
+solution("100-200*300-500+20")
