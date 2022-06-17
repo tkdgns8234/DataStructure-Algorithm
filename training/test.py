@@ -655,46 +655,110 @@ from collections import deque
 #
 # print(bfs())
 
-from itertools import permutations
+# from itertools import permutations
 
-def oper(a, b, op):
-    a, b = map(int, [a, b])
-    if op == '-':
-        return a-b
-    elif op == '*':
-        return a*b
-    elif op == '+':
-        return a+b
+# def oper(a, b, op):
+#     a, b = map(int, [a, b])
+#     if op == '-':
+#         return a-b
+#     elif op == '*':
+#         return a*b
+#     elif op == '+':
+#         return a+b
 
-def solve(op, exp):
-    # 표현식 쪼개기
-    arr = []
-    temp = ''
-    for e in exp:
-        if str(e).isnumeric():
-            temp += e
-        else:
-            arr.append(int(temp))
-            arr.append(e)
-            temp = ''
-    arr.append(int(temp))
+# def solve(op, exp):
+#     # 표현식 쪼개기
+#     arr = []
+#     temp = ''
+#     for e in exp:
+#         if str(e).isnumeric():
+#             temp += e
+#         else:
+#             arr.append(int(temp))
+#             arr.append(e)
+#             temp = ''
+#     arr.append(int(temp))
 
-    for o in op:
-        stack = []
-        while arr:
-            v = arr.pop(0)
-            if v == o:
-                stack.append(oper(stack.pop(), arr.pop(0), o))
-            else:
-                stack.append(v)
-        arr = stack
-    return int(arr[0])
+#     for o in op:
+#         stack = []
+#         while arr:
+#             v = arr.pop(0)
+#             if v == o:
+#                 stack.append(oper(stack.pop(), arr.pop(0), o))
+#             else:
+#                 stack.append(v)
+#         arr = stack
+#     return int(arr[0])
 
 
-def solution(expression):
-    answer = 0
-    for op in permutations(['+','*','-'], 3):
-        answer = max(answer, abs(solve(op, expression)))
-    return answer
+# def solution(expression):
+#     answer = 0
+#     for op in permutations(['+','*','-'], 3):
+#         answer = max(answer, abs(solve(op, expression)))
+#     return answer
 
-solution("100-200*300-500+20")
+# solution("100-200*300-500+20")
+
+# 백준 수 고르기
+
+# n, m = map(int, input().split())
+# data = [int(input()) for i in range(n)]
+# data.sort()
+#
+# ans = int(1e9)
+# end = 0
+# for start in range(n-1):
+#     while end < n and data[end] - data[start] < m:
+#         end += 1
+#     if end == n:
+#         break
+#     ans = min(ans, data[end] - data[start])
+# print(ans)
+
+# 백준 부분합
+# 투포인터 풀이
+# N, S = map(int, input().split())
+# data = list(map(int, input().split()))
+#
+# ans = int(1e9)
+# start, end = 0, 0
+# sum_ = 0
+# while True:
+#     if sum_ >= S:
+#         ans = min(ans, end - start)
+#         sum_ -= data[start]
+#         start += 1
+#     elif end == N:
+#         break
+#     else:
+#         sum_ += data[end]
+#         end += 1
+#
+# print(ans if ans != int(1e9) else 0)
+
+# 누적합 + 이진탐색
+# N, S = map(int, input().split())
+# data = list(map(int, input().split()))
+# prefix_sum = [0] * (N+1)
+# for i in range(N):
+#     prefix_sum[i + 1] = prefix_sum[i] + data[i]
+#
+# INF = int(1e9)
+# def binary_search(start, end, minus_idx):
+#     ret_val = INF
+#     while start <= end:
+#         mid = (start+end)//2
+#         if prefix_sum[mid] - prefix_sum[minus_idx] < S:
+#             start = mid + 1
+#         else:
+#             ret_val = mid
+#             end = mid - 1
+#     return ret_val
+#
+# ans = INF
+# for start in range(1, N+1):
+#     rv = binary_search(start, N, start-1)
+#     if rv != INF:
+#         ans = min(ans, rv - start + 1)
+# print(ans if ans is not INF else 0)
+
