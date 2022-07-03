@@ -762,3 +762,11 @@ from collections import deque
 #         ans = min(ans, rv - start + 1)
 # print(ans if ans is not INF else 0)
 
+# from itertools import combinations
+# data = [int(input()) for _ in range(9)]
+# for comb in combinations(data, 7):
+#     if sum(comb) == 100:
+#         print(*sorted(comb))
+#         break
+
+
