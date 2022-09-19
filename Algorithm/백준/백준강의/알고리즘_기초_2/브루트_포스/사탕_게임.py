@@ -1,6 +1,7 @@
 
 # 두 위치 바꾸고
 # 두 위치부터 상하좌우 확인
+
 from collections import deque
 
 reverse_move_type = [(1, 0), (-1, 0), (0, -1), (0, 1)]
